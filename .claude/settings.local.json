@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.technoreach.co.jp)",
+      "WebFetch(domain:robotcloud.jp)",
+      "WebFetch(domain:fabic.jp)",
+      "WebFetch(domain:www.serendip-rxm.com)",
+      "WebFetch(domain:afrel.co.jp)",
+      "WebFetch(domain:bynas.com)",
+      "Bash(mkdir -p \"C:\\\\Users\\\\satoh\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--AI-Server-Obsidian----\\\\dbfaa456-cdb8-459b-9f62-708f2917b1c9\\\\scratchpad\\\\rts_report\")",
+      "Bash(node -e \"require\\('docx'\\); console.log\\('ok'\\)\")",
+      "PowerShell(node -v)",
+      "PowerShell(npm -v)",
+      "PowerShell(pandoc -v)",
+      "PowerShell(python --version)",
+      "WebFetch(domain:factory-dx-center.com)",
+      "WebFetch(domain:learninglab.afrel.co.jp)",
+      "WebFetch(domain:afrel-robotics.jp)",
+      "WebFetch(domain:robolease.disr-inc.com)",
+      "WebFetch(domain:www.vstone.co.jp)",
+      "mcp__mcp-registry__list_connectors",
+      "mcp__mcp-registry__search_mcp_registry",
+      "PowerShell(python -c \"import openpyxl, pandas; print\\('ok', openpyxl.__version__, pandas.__version__\\)\")",
+      "PowerShell(Get-Command python -All)",
+      "PowerShell(Get-Command py -ErrorAction SilentlyContinue)",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__get_page_text",
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__browser_batch",
+      "mcp__claude-in-chrome__read_page",
+      "mcp__claude-in-chrome__file_upload",
+      "mcp__claude-in-chrome__javascript_tool"
+    ]
+  }
+}

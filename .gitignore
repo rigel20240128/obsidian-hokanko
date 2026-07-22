@@ -1,0 +1,14 @@
+# Obsidian internal state (changes constantly, not meaningful history)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+
+# Secrets
+.env
+*.env
+**/.env
+
+# OS junk
+Thumbs.db
+.DS_Store

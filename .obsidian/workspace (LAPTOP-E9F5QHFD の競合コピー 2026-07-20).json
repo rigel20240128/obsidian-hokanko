@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "5223b738b28ed18a",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9afa910e16d2119",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12d82958cb1cf14d",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "グラフビュー"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "64edfe8e1f3b38e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "99bd645677f3d440",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39ed352364ad6808",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "6a542620c39ff659",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "896c3c934f32aa64",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cc071311a8254a01",
+    "type": "split",
+    "children": [
+      {
+        "id": "6cbae46e874265fe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c234b1fc87b3f7e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "バックリンク"
+            }
+          },
+          {
+            "id": "bfa998f43eba2575",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "b44bbdb4b374febb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "f521d222b7d3aa67",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "d002bcd1f575796a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "アウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "39ed352364ad6808",
+  "lastOpenFiles": [
+    "三国志キャラクタ/AI社員/その他/chara_popup_44.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_42.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_45.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_41.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_40.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_35.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_34.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_38.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_37.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_39.jpg",
+    "三国志キャラクタ/AI社員/その他/chara_popup_36.jpg",
+    "三国志キャラクタ/AI社員/その他",
+    "RIGEL/Rigel Training System/RTS競合調査報告書.md",
+    "RIGEL/古民家事業/Lantern.md",
+    "RIGEL/Rigel Training System/RIGEL事業概要.md",
+    "RIGEL/古民家事業/古民家事業.md",
+    "三国志キャラクタ/AI社員",
+    "三国志キャラクタ",
+    "RIGEL/AIエージェント組織表.md",
+    "RIGEL/RIGEL Presentation Style Skill.md",
+    "RIGEL/営業提案プレゼン作成.md",
+    "RIGEL/2026.07.md",
+    "RIGEL/Skills.md",
+    "RIGEL/logo",
+    "RIGEL/Rigel Training System",
+    "RIGEL/古民家事業",
+    "RTS競合調査_一覧.csv",
+    "RIGEL",
+    "skills/営業提案プレゼン作成.md",
+    "Second brain/Skills/営業提案プレゼン作成.md",
+    "Second brain/2026-07-20.md",
+    "Second brain/無題のファイル.canvas"
+  ]
+}
