@@ -93,11 +93,11 @@
       <div class="row2">
         <div>
           <label>キャップ高さ (mm/個)</label>
-          <input type="number" id="capH" value="2" min="0" step="0.5">
+          <input type="number" id="capH" value="3" min="0" step="0.5">
         </div>
         <div>
           <label>柱1本あたりキャップ数</label>
-          <select id="capN"><option value="2" selected>2 (上下)</option><option value="1">1</option><option value="0">0 (なし)</option></select>
+          <select id="capN"><option value="1" selected>1 (上端)</option><option value="2">2 (上下)</option><option value="0">0 (なし)</option></select>
         </div>
       </div>
 
@@ -165,10 +165,10 @@
       <details open>
         <summary>計算ルール（設計書「アルミフレーム基本設計」準拠）</summary>
         <ul style="font-size:13px;color:var(--sub);padding-left:20px">
-          <li>柱（大黒柱）長さ Z ＝ 高さ H − キャップ高さ × キャップ数</li>
-          <li>幅フレーム長さ ＝ W − 太さ×2（上下で計4本）</li>
-          <li>奥行フレーム長さ ＝ D − 太さ×2（上下で計4本）</li>
-          <li>柱は四つ角に4本 → 直方体の基本骨格は12本</li>
+          <li>基本形は「サイコロ形状（直方体）」＝ 3種類×各4本の <b>12本</b> 構成</li>
+          <li>柱（大黒柱）長さ Z ＝ 高さ H − キャップ高さ × 個数（例：1000−3=997）</li>
+          <li>幅フレーム長さ ＝ W − 太さ×2（4本）／ 奥行フレーム長さ ＝ D − 太さ×2（4本）</li>
+          <li>切断長は0.5mm単位に丸め、発注品番 <code>NFSL6-太さ太さ-長さ</code> を自動生成</li>
           <li>面内の柱間距離が N 以上 → その面に中間補強柱を等間隔で追加</li>
           <li>パネル寸法 ＝ 各面の外形 − 太さ×2、厚5mm・透明・φ6</li>
         </ul>
@@ -176,9 +176,8 @@
       <details>
         <summary>使用部材と参照（MISUMI）</summary>
         <p style="font-size:12.5px;color:var(--sub)">
-          アルミフレーム：6シリーズ 正方形（□30/40/60/80）<br>
-          <span class="chip">□30 HFS6-3030</span><span class="chip">□40 HFS6-4040</span>
-          <span class="chip">□60 HFS6-6060</span><span class="chip">□80 HFS6-8080</span><br>
+          アルミフレーム：MISUMI 6シリーズ 正方形・切断長付（□30/40/60/80）<br>
+          品番形式：<code>NFSL6-太さ太さ-長さ</code> 例）<span class="chip">NFSL6-3030-740</span><span class="chip">NFSL6-3030-997</span><br>
           フレームキャップ：<span class="chip">HFCB6-3030-B（□30用）</span><span class="chip">HFCB6-6060-B（□60用）</span><br>
           参照：
           <a href="https://jp.misumi-ec.com/vona2/detail/110311092329/" target="_blank" rel="noopener">□30</a> ／
@@ -188,11 +187,11 @@
         </p>
       </details>
       <details>
-        <summary>要確認事項（設計書が未確定な点）</summary>
+        <summary>補足・要確認事項</summary>
         <ul style="font-size:12.5px;color:var(--warn);padding-left:20px">
-          <li>設計書に「基本形は16本」とあるが、直方体の骨格は幾何的に12本。差分は中間補強/中桟の想定と解釈し、補強ルールで調整可能にしています。</li>
+          <li>基本形＝12本（サイコロ形状）で確定。実例 □30・H1000×W600×D800 → NFSL6-3030-997×4／740×4／540×4＋HFCB6-3030-B×4 と一致。</li>
           <li>キャップは□30/□60用のみ指定。□40/□80は該当キャップ未指定として明示します。</li>
-          <li>キャップ高さ（初期値2mm）は仮値です。実測値に合わせて入力してください。</li>
+          <li>キャップ高さ初期値3mm（HFCB6-3030-B基準）。□60等で異なる場合は入力を調整してください。</li>
           <li>補強柱は縦柱で追加。横補強が必要な場合は別途ご指示ください。</li>
         </ul>
       </details>
@@ -204,12 +203,18 @@
 
 <script>
 // ====== 部材データ ======
-const PROFILE = {30:"HFS6-3030",40:"HFS6-4040",60:"HFS6-6060",80:"HFS6-8080"};
-const CAP     = {30:"HFCB6-3030-B",40:"（該当キャップ未指定）",60:"HFCB6-6060-B",80:"（該当キャップ未指定）"};
+// アルミフレーム：MISUMI 6シリーズ 正方形（切断長・端面加工付）NFSL6-<太さ><太さ>-<長さ>
+const SERIES = "NFSL6";
+const CAP    = {30:"HFCB6-3030-B",40:"（該当キャップ未指定）",60:"HFCB6-6060-B",80:"（該当キャップ未指定）"};
 
 let lastCSV = "";  // CSV出力用に保持
 
 function num(id){ return parseFloat(document.getElementById(id).value); }
+// 切断長は0.5mm単位に丸める（MISUMI発注単位）
+function round05(v){ return Math.round(v*2)/2; }
+function fmtLen(v){ const r=round05(v); return Number.isInteger(r)?String(r):r.toFixed(1); }
+// 発注品番: NFSL6-3030-740 など
+function partNo(t,len){ return `${SERIES}-${t}${t}-${fmtLen(len)}`; }
 
 function calc(){
   const t = parseInt(document.getElementById('size').value);
@@ -221,10 +226,10 @@ function calc(){
     alert('寸法を確認してください（幅・奥行は太さ×2より大きい必要があります）。'); return;
   }
 
-  // --- 長さ計算 ---
-  const Z    = +(H - capH*capN).toFixed(1);   // 柱長さ
-  const Wlen = +(W - t*2).toFixed(1);          // 幅フレーム
-  const Dlen = +(D - t*2).toFixed(1);          // 奥行フレーム
+  // --- 長さ計算（切断長は0.5mm単位） ---
+  const Z    = round05(H - capH*capN);   // 柱長さ = 高さ - キャップ高さ×個数
+  const Wlen = round05(W - t*2);          // 幅フレーム = 幅 - 太さ×2
+  const Dlen = round05(D - t*2);          // 奥行フレーム = 奥行 - 太さ×2
 
   // --- 補強柱（面内の柱間距離が N 以上で追加） ---
   // 幅方向スパン=Wlen（前後2面）／奥行方向スパン=Dlen（左右2面）
@@ -243,13 +248,13 @@ function calc(){
   if(reinfW>0) rows.push({name:`補強柱・幅方向（前後 各${wDiv}本）`, len:Z, qty:reinfW});
   if(reinfD>0) rows.push({name:`補強柱・奥行方向（左右 各${dDiv}本）`, len:Z, qty:reinfD});
 
-  const profile = PROFILE[t];
   let totalQty=0, totalLen=0;
-  let fhtml = `<thead><tr><th>部材</th><th>型番ベース</th><th>長さ(mm)</th><th>本数</th><th>小計長(mm)</th></tr></thead><tbody>`;
+  let fhtml = `<thead><tr><th>部材</th><th>MISUMI発注品番</th><th>長さ(mm)</th><th>本数</th><th>小計長(mm)</th></tr></thead><tbody>`;
   rows.forEach(r=>{
     const sub = +(r.len*r.qty).toFixed(1);
     totalQty += r.qty; totalLen += sub;
-    fhtml += `<tr><td class="l">${r.name}</td><td>${profile}</td><td>${r.len}</td><td>${r.qty}</td><td>${sub}</td></tr>`;
+    r.part = partNo(t, r.len);
+    fhtml += `<tr><td class="l">${r.name}</td><td>${r.part}</td><td>${fmtLen(r.len)}</td><td>${r.qty}</td><td>${sub}</td></tr>`;
   });
   fhtml += `</tbody><tfoot><tr><td colspan="3">合計</td><td>${totalQty} 本</td><td>${totalLen.toFixed(1)}</td></tr></tfoot>`;
   document.getElementById('frameTable').innerHTML = fhtml;
@@ -294,7 +299,7 @@ function calc(){
   drawSVG(W,D,H,t);
 
   // --- CSV 組み立て ---
-  buildCSV(t,H,W,D,Z,rows,profile,capPart,capQty,panelRows,totalQty,totalLen);
+  buildCSV(t,H,W,D,Z,rows,capPart,capQty,panelRows,totalQty,totalLen);
 
   document.getElementById('result').classList.remove('hidden');
 }
@@ -305,13 +310,13 @@ function holeCount(a,b,pitch){
   return 2*na + 2*nb - 4;  // 外周上の穴（四隅は共有）
 }
 
-function buildCSV(t,H,W,D,Z,rows,profile,capPart,capQty,panelRows,totalQty,totalLen){
+function buildCSV(t,H,W,D,Z,rows,capPart,capQty,panelRows,totalQty,totalLen){
   const L=[];
   L.push(["FA設備用アルミフレーム 部材リスト"]);
   L.push(["フレーム太さ",`□${t}`,"外形(H×W×D)",`${H}×${W}×${D}`,"柱長Z",Z]);
   L.push([]);
-  L.push(["区分","部材","型番ベース","長さ(mm)","本数","小計長(mm)"]);
-  rows.forEach(r=> L.push(["フレーム",r.name,profile,r.len,r.qty,+(r.len*r.qty).toFixed(1)]));
+  L.push(["区分","部材","MISUMI発注品番","長さ(mm)","本数","小計長(mm)"]);
+  rows.forEach(r=> L.push(["フレーム",r.name,r.part,fmtLen(r.len),r.qty,+(r.len*r.qty).toFixed(1)]));
   L.push(["合計","","","",totalQty,totalLen.toFixed(1)]);
   L.push([]);
   L.push(["区分","用途","型番","個数"]);
