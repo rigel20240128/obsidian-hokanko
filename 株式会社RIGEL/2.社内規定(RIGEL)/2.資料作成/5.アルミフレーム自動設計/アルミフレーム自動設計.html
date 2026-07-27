@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FA設備用 アルミフレーム自動設計ツール</title>
+<style>
+  :root{
+    --bg:#f4f6f9; --panel:#ffffff; --ink:#1f2933; --sub:#52606d;
+    --line:#d3dce6; --accent:#1769aa; --accent2:#0f4c75; --ok:#2e7d32;
+    --warn:#b26a00; --chip:#eef4fb;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+       background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;}
+  header{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;
+         padding:18px 22px;}
+  header h1{margin:0;font-size:19px;font-weight:600;letter-spacing:.5px;}
+  header p{margin:4px 0 0;font-size:12.5px;opacity:.9;}
+  .wrap{max-width:1180px;margin:0 auto;padding:18px;}
+  .grid{display:grid;grid-template-columns:340px 1fr;gap:18px;align-items:start;}
+  @media(max-width:900px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+        padding:16px 18px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .card h2{margin:0 0 12px;font-size:15px;color:var(--accent2);
+           border-left:4px solid var(--accent);padding-left:8px;}
+  label{display:block;font-size:12.5px;color:var(--sub);margin:10px 0 3px;font-weight:600;}
+  input[type=number],select{width:100%;padding:7px 9px;border:1px solid var(--line);
+        border-radius:6px;font-size:14px;background:#fff;}
+  input[type=number]:focus,select:focus{outline:2px solid var(--chip);border-color:var(--accent);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+  .faces{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;margin-top:6px;}
+  .faces label{display:flex;align-items:center;gap:6px;margin:2px 0;font-weight:500;color:var(--ink);cursor:pointer;}
+  .faces input{width:auto;}
+  button{cursor:pointer;border:none;border-radius:7px;font-size:14px;font-weight:600;padding:10px 14px;}
+  .btn-main{background:var(--accent);color:#fff;width:100%;margin-top:14px;}
+  .btn-main:hover{background:var(--accent2);}
+  .btn-csv{background:var(--ok);color:#fff;}
+  .btn-csv:hover{filter:brightness(.92);}
+  .btn-print{background:#fff;color:var(--accent2);border:1px solid var(--accent);}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;}
+  th,td{border:1px solid var(--line);padding:6px 8px;text-align:center;}
+  th{background:var(--chip);color:var(--accent2);font-weight:600;}
+  td.l{text-align:left;}
+  tr.sub td{background:#fafcff;font-weight:600;}
+  tfoot td{background:#eef4fb;font-weight:700;}
+  .chip{display:inline-block;background:var(--chip);color:var(--accent2);border-radius:12px;
+        padding:2px 10px;font-size:12px;margin:2px 4px 2px 0;}
+  .note{font-size:12px;color:var(--sub);background:#fbfbfa;border:1px dashed var(--line);
+        border-radius:8px;padding:10px 12px;}
+  .note b{color:var(--warn);}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+  .hidden{display:none;}
+  svg{width:100%;height:auto;background:#fbfdff;border:1px solid var(--line);border-radius:8px;}
+  .kpi{display:flex;gap:14px;flex-wrap:wrap;margin:4px 0 10px;}
+  .kpi div{background:var(--chip);border-radius:8px;padding:8px 14px;min-width:110px;}
+  .kpi span{display:block;font-size:11px;color:var(--sub);}
+  .kpi b{font-size:18px;color:var(--accent2);}
+  a{color:var(--accent);}
+  details summary{cursor:pointer;font-weight:600;color:var(--accent2);}
+  code{background:#eef2f6;padding:1px 5px;border-radius:4px;font-size:12px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>FA設備用 アルミフレーム自動設計ツール</h1>
+  <p>外形寸法と太さを入力すると、部材リスト（BOM）・キャップ・パネルを自動算出します ／ 株式会社RIGEL</p>
+</header>
+
+<div class="wrap">
+<div class="grid">
+
+  <!-- ============ 入力パネル ============ -->
+  <div>
+    <div class="card">
+      <h2>1. 入力条件</h2>
+
+      <label>フレーム太さ（□断面）</label>
+      <select id="size">
+        <option value="30">□30</option>
+        <option value="40" selected>□40</option>
+        <option value="60">□60</option>
+        <option value="80">□80</option>
+      </select>
+
+      <div class="row3">
+        <div><label>高さ H (mm)</label><input type="number" id="H" value="1000" min="1"></div>
+        <div><label>幅 W (mm)</label><input type="number" id="W" value="600" min="1"></div>
+        <div><label>奥行 D (mm)</label><input type="number" id="D" value="800" min="1"></div>
+      </div>
+
+      <div class="row2">
+        <div>
+          <label>キャップ高さ (mm/個)</label>
+          <input type="number" id="capH" value="2" min="0" step="0.5">
+        </div>
+        <div>
+          <label>柱1本あたりキャップ数</label>
+          <select id="capN"><option value="2" selected>2 (上下)</option><option value="1">1</option><option value="0">0 (なし)</option></select>
+        </div>
+      </div>
+
+      <label>補強フレーム追加しきい値 N (mm)</label>
+      <input type="number" id="N" value="800" min="1">
+      <div class="note" style="margin-top:6px">大黒柱間の距離が N 以上の面に、中間補強フレーム（縦柱）を自動追加します。</div>
+
+      <button class="btn-main" onclick="calc()">▶ 自動設計を実行</button>
+    </div>
+
+    <div class="card">
+      <h2>2. パネル設定</h2>
+      <label>取り付ける面</label>
+      <div class="faces">
+        <label><input type="checkbox" class="face" value="前" checked>前面</label>
+        <label><input type="checkbox" class="face" value="後" checked>後面</label>
+        <label><input type="checkbox" class="face" value="左" checked>左面</label>
+        <label><input type="checkbox" class="face" value="右" checked>右面</label>
+        <label><input type="checkbox" class="face" value="上" checked>上面</label>
+        <label><input type="checkbox" class="face" value="下">下面</label>
+      </div>
+      <label>穴ピッチ (mm) ／ φ6</label>
+      <input type="number" id="pitch" value="200" min="20">
+      <div class="note" style="margin-top:8px">
+        パネル：厚 5mm・透明・穴 φ6。寸法は「外形 − 太さ×2」（設計書の内寸計算）。
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 結果パネル ============ -->
+  <div>
+    <div id="result" class="hidden">
+      <div class="card">
+        <div class="toolbar">
+          <button class="btn-csv" onclick="downloadCSV()">⬇ 部材リストをCSV出力</button>
+          <button class="btn-print" onclick="window.print()">🖨 印刷 / PDF保存</button>
+        </div>
+        <div class="kpi" id="kpi"></div>
+        <div id="condLine"></div>
+      </div>
+
+      <div class="card">
+        <h2>3. フレーム部材リスト（BOM）</h2>
+        <table id="frameTable"></table>
+      </div>
+
+      <div class="card">
+        <h2>4. フレームキャップ</h2>
+        <table id="capTable"></table>
+      </div>
+
+      <div class="card">
+        <h2>5. パネル</h2>
+        <table id="panelTable"></table>
+      </div>
+
+      <div class="card">
+        <h2>6. 構造イメージ（簡易ワイヤーフレーム）</h2>
+        <div id="svgBox"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>設計の前提・仕様メモ</h2>
+      <details open>
+        <summary>計算ルール（設計書「アルミフレーム基本設計」準拠）</summary>
+        <ul style="font-size:13px;color:var(--sub);padding-left:20px">
+          <li>柱（大黒柱）長さ Z ＝ 高さ H − キャップ高さ × キャップ数</li>
+          <li>幅フレーム長さ ＝ W − 太さ×2（上下で計4本）</li>
+          <li>奥行フレーム長さ ＝ D − 太さ×2（上下で計4本）</li>
+          <li>柱は四つ角に4本 → 直方体の基本骨格は12本</li>
+          <li>面内の柱間距離が N 以上 → その面に中間補強柱を等間隔で追加</li>
+          <li>パネル寸法 ＝ 各面の外形 − 太さ×2、厚5mm・透明・φ6</li>
+        </ul>
+      </details>
+      <details>
+        <summary>使用部材と参照（MISUMI）</summary>
+        <p style="font-size:12.5px;color:var(--sub)">
+          アルミフレーム：6シリーズ 正方形（□30/40/60/80）<br>
+          <span class="chip">□30 HFS6-3030</span><span class="chip">□40 HFS6-4040</span>
+          <span class="chip">□60 HFS6-6060</span><span class="chip">□80 HFS6-8080</span><br>
+          フレームキャップ：<span class="chip">HFCB6-3030-B（□30用）</span><span class="chip">HFCB6-6060-B（□60用）</span><br>
+          参照：
+          <a href="https://jp.misumi-ec.com/vona2/detail/110311092329/" target="_blank" rel="noopener">□30</a> ／
+          <a href="https://jp.misumi-ec.com/vona2/detail/110302689860/" target="_blank" rel="noopener">□40</a> ／
+          <a href="https://jp.misumi-ec.com/vona2/detail/110302687330/" target="_blank" rel="noopener">□60</a> ／
+          <a href="https://jp.misumi-ec.com/vona2/detail/110302690740/" target="_blank" rel="noopener">□80</a>
+        </p>
+      </details>
+      <details>
+        <summary>要確認事項（設計書が未確定な点）</summary>
+        <ul style="font-size:12.5px;color:var(--warn);padding-left:20px">
+          <li>設計書に「基本形は16本」とあるが、直方体の骨格は幾何的に12本。差分は中間補強/中桟の想定と解釈し、補強ルールで調整可能にしています。</li>
+          <li>キャップは□30/□60用のみ指定。□40/□80は該当キャップ未指定として明示します。</li>
+          <li>キャップ高さ（初期値2mm）は仮値です。実測値に合わせて入力してください。</li>
+          <li>補強柱は縦柱で追加。横補強が必要な場合は別途ご指示ください。</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+// ====== 部材データ ======
+const PROFILE = {30:"HFS6-3030",40:"HFS6-4040",60:"HFS6-6060",80:"HFS6-8080"};
+const CAP     = {30:"HFCB6-3030-B",40:"（該当キャップ未指定）",60:"HFCB6-6060-B",80:"（該当キャップ未指定）"};
+
+let lastCSV = "";  // CSV出力用に保持
+
+function num(id){ return parseFloat(document.getElementById(id).value); }
+
+function calc(){
+  const t = parseInt(document.getElementById('size').value);
+  const H = num('H'), W = num('W'), D = num('D');
+  const capH = num('capH'), capN = parseInt(document.getElementById('capN').value);
+  const N = num('N'), pitch = num('pitch');
+
+  if([H,W,D].some(v=>!(v>0)) || t*2>=W || t*2>=D){
+    alert('寸法を確認してください（幅・奥行は太さ×2より大きい必要があります）。'); return;
+  }
+
+  // --- 長さ計算 ---
+  const Z    = +(H - capH*capN).toFixed(1);   // 柱長さ
+  const Wlen = +(W - t*2).toFixed(1);          // 幅フレーム
+  const Dlen = +(D - t*2).toFixed(1);          // 奥行フレーム
+
+  // --- 補強柱（面内の柱間距離が N 以上で追加） ---
+  // 幅方向スパン=Wlen（前後2面）／奥行方向スパン=Dlen（左右2面）
+  const wDiv = Wlen >= N ? Math.floor(Wlen / N) : 0;   // 各面の中間柱本数
+  const dDiv = Dlen >= N ? Math.floor(Dlen / N) : 0;
+  const reinfW = wDiv * 2;   // 前後2面
+  const reinfD = dDiv * 2;   // 左右2面
+  const reinfTotal = reinfW + reinfD;
+
+  // --- フレーム部材 BOM ---
+  const rows = [
+    {name:"柱（大黒柱・縦）", len:Z,    qty:4},
+    {name:"幅フレーム（横）", len:Wlen, qty:4},
+    {name:"奥行フレーム（横）", len:Dlen, qty:4},
+  ];
+  if(reinfW>0) rows.push({name:`補強柱・幅方向（前後 各${wDiv}本）`, len:Z, qty:reinfW});
+  if(reinfD>0) rows.push({name:`補強柱・奥行方向（左右 各${dDiv}本）`, len:Z, qty:reinfD});
+
+  const profile = PROFILE[t];
+  let totalQty=0, totalLen=0;
+  let fhtml = `<thead><tr><th>部材</th><th>型番ベース</th><th>長さ(mm)</th><th>本数</th><th>小計長(mm)</th></tr></thead><tbody>`;
+  rows.forEach(r=>{
+    const sub = +(r.len*r.qty).toFixed(1);
+    totalQty += r.qty; totalLen += sub;
+    fhtml += `<tr><td class="l">${r.name}</td><td>${profile}</td><td>${r.len}</td><td>${r.qty}</td><td>${sub}</td></tr>`;
+  });
+  fhtml += `</tbody><tfoot><tr><td colspan="3">合計</td><td>${totalQty} 本</td><td>${totalLen.toFixed(1)}</td></tr></tfoot>`;
+  document.getElementById('frameTable').innerHTML = fhtml;
+
+  // --- キャップ ---
+  const capQty = capN>0 ? 4*capN : 0;  // 四つ角の柱に取り付け（補強柱は任意）
+  const capPart = CAP[t];
+  document.getElementById('capTable').innerHTML =
+    `<thead><tr><th>用途</th><th>型番</th><th>個数</th></tr></thead><tbody>`+
+    `<tr><td class="l">柱端キャップ（□${t}用）</td><td>${capPart}</td><td>${capQty}</td></tr></tbody>`;
+
+  // --- パネル ---
+  const faces = [...document.querySelectorAll('.face:checked')].map(c=>c.value);
+  // 各面の (軸1, 軸2) 外形寸法
+  const faceDim = {
+    "前":[W,H],"後":[W,H],"左":[D,H],"右":[D,H],"上":[W,D],"下":[W,D]
+  };
+  let phtml = `<thead><tr><th>面</th><th>寸法 W×H(mm)</th><th>厚(mm)</th><th>材質</th><th>穴</th><th>穴数(目安)</th></tr></thead><tbody>`;
+  const panelRows = [];
+  faces.forEach(f=>{
+    const a = +(faceDim[f][0]-t*2).toFixed(1);
+    const b = +(faceDim[f][1]-t*2).toFixed(1);
+    const holes = holeCount(a,b,pitch);
+    panelRows.push({face:f,a,b,holes});
+    phtml += `<tr><td class="l">${f}面</td><td>${a} × ${b}</td><td>5</td><td>透明</td><td>φ6</td><td>${holes}</td></tr>`;
+  });
+  if(faces.length===0) phtml += `<tr><td colspan="6">（面が選択されていません）</td></tr>`;
+  phtml += `</tbody>`;
+  document.getElementById('panelTable').innerHTML = phtml;
+
+  // --- KPI ---
+  document.getElementById('kpi').innerHTML =
+    `<div><span>フレーム総本数</span><b>${totalQty} 本</b></div>`+
+    `<div><span>切断総長</span><b>${(totalLen/1000).toFixed(2)} m</b></div>`+
+    `<div><span>補強柱</span><b>${reinfTotal} 本</b></div>`+
+    `<div><span>パネル</span><b>${faces.length} 枚</b></div>`;
+  document.getElementById('condLine').innerHTML =
+    `<span class="chip">□${t}</span><span class="chip">外形 H${H}×W${W}×D${D}</span>`+
+    `<span class="chip">柱長 Z=${Z}</span><span class="chip">補強N=${N}</span>`;
+
+  // --- SVG ---
+  drawSVG(W,D,H,t);
+
+  // --- CSV 組み立て ---
+  buildCSV(t,H,W,D,Z,rows,profile,capPart,capQty,panelRows,totalQty,totalLen);
+
+  document.getElementById('result').classList.remove('hidden');
+}
+
+function holeCount(a,b,pitch){
+  const na = Math.max(2, Math.floor(a/pitch)+1);
+  const nb = Math.max(2, Math.floor(b/pitch)+1);
+  return 2*na + 2*nb - 4;  // 外周上の穴（四隅は共有）
+}
+
+function buildCSV(t,H,W,D,Z,rows,profile,capPart,capQty,panelRows,totalQty,totalLen){
+  const L=[];
+  L.push(["FA設備用アルミフレーム 部材リスト"]);
+  L.push(["フレーム太さ",`□${t}`,"外形(H×W×D)",`${H}×${W}×${D}`,"柱長Z",Z]);
+  L.push([]);
+  L.push(["区分","部材","型番ベース","長さ(mm)","本数","小計長(mm)"]);
+  rows.forEach(r=> L.push(["フレーム",r.name,profile,r.len,r.qty,+(r.len*r.qty).toFixed(1)]));
+  L.push(["合計","","","",totalQty,totalLen.toFixed(1)]);
+  L.push([]);
+  L.push(["区分","用途","型番","個数"]);
+  L.push(["キャップ",`柱端キャップ □${t}用`,capPart,capQty]);
+  L.push([]);
+  L.push(["区分","面","寸法W×H(mm)","厚(mm)","材質","穴","穴数目安"]);
+  panelRows.forEach(p=> L.push(["パネル",`${p.face}面`,`${p.a}×${p.b}`,5,"透明","φ6",p.holes]));
+  lastCSV = L.map(r=> r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(",")).join("\r\n");
+}
+
+function downloadCSV(){
+  if(!lastCSV){ alert("先に「自動設計を実行」してください。"); return; }
+  const bom = "﻿"; // Excel文字化け防止(UTF-8 BOM)
+  const blob = new Blob([bom+lastCSV],{type:"text/csv;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = "アルミフレーム部材リスト.csv";
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(url);
+}
+
+// 簡易アイソメ ワイヤーフレーム
+function drawSVG(W,D,H,t){
+  const maxDim = Math.max(W,D,H);
+  const s = 180/maxDim;                 // スケール
+  const w=W*s, d=D*s, h=H*s;
+  const ox=0.5*d, oy=0.35*d;            // アイソメ奥行オフセット
+  const pad=40, boxW=w+ox+pad*2, boxH=h+oy+pad*2;
+  const X=x=>x+pad, Y=y=>boxH-pad-y;    // 下原点
+  // 前面下(0,0)基準の8頂点
+  const P=(x,y,z)=>[X(x + z*(ox/d||0)), Y(y + z*(oy/d||0))];
+  // z=0 前面, z=d 後面（zはピクセル）
+  const f=[[0,0],[w,0],[w,h],[0,h]];    // 前面 4点(px)
+  const off=[ox,oy];
+  const front=f.map(p=>[X(p[0]),Y(p[1])]);
+  const back =f.map(p=>[X(p[0]+off[0]),Y(p[1]+off[1])]);
+  const line=(a,b,c="#0f4c75",wd=2)=>`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="${c}" stroke-width="${wd}"/>`;
+  let g="";
+  // 後面(薄)
+  for(let i=0;i<4;i++) g+=line(back[i],back[(i+1)%4],"#9db6ce",1.5);
+  // 連結
+  for(let i=0;i<4;i++) g+=line(front[i],back[i],"#5c7fa3",1.5);
+  // 前面(濃)
+  for(let i=0;i<4;i++) g+=line(front[i],front[(i+1)%4],"#0f4c75",2.5);
+  document.getElementById('svgBox').innerHTML =
+    `<svg viewBox="0 0 ${boxW} ${boxH}" xmlns="http://www.w3.org/2000/svg">${g}
+      <text x="${pad}" y="${boxH-6}" font-size="11" fill="#52606d">W=${W}</text>
+      <text x="6" y="${pad+6}" font-size="11" fill="#52606d">H=${H}</text>
+      <text x="${boxW-70}" y="${pad+2}" font-size="11" fill="#52606d">D=${D}</text>
+     </svg>`;
+}
+
+// 初期表示
+calc();
+</script>
+</body>
+</html>
