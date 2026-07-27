@@ -1,0 +1,47 @@
+##基本構成
+
+-アルミフレームは30,40,60,80サイズを使用
+-
+
+-30 : https://jp.misumi-ec.com/vona2/detail/110311092329/
+-40 : https://jp.misumi-ec.com/vona2/detail/110302689860/?KWSearch=%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0&searchFlow=results2products&CategorySpec=00000173392%3A%3Ad&searchCategorySpec=01&variantType=20251001_pj1_8dnS13sZFeBaBep_004
+-60 : https://jp.misumi-ec.com/vona2/detail/110302687330/?CategorySpec=00000173346%3A%3Amig00000002545093%0900000173392%3A%3Ac
+-80 : https://jp.misumi-ec.com/vona2/detail/110302690740/?KWSearch=%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0&searchFlow=results2products&CategorySpec=00000173346%3A%3Amig00000002545096%0900000173392%3A%3Ad&searchCategorySpec=01&variantType=20251001_pj1_8dnS13sZFeBaBep_005
+
+-フレームキャップは下記のみ使用
+　HFCB6-3030-B
+　HFCB6-6060-B
+
+
+1.太さを決める
+　選択肢は、□30,40,60,80のみ
+2.外形寸法を決める
+　高さ：1000mm 幅：600mm　奥行800mm場合
+3.長さを計算する
+　高さを1000mm - フレームキャップの高さを算出(Z)とする
+　高さフレーム(Z)が4本必要（四つ角の大黒柱）
+　幅600mmからフレーム太さx2本分を引いた長さ(W)を4本
+　奥行800mm フレーム太さx2本分を引いた長さ(W)を4本
+4.本数を計算する
+　基本形は16本の構成
+  もし、大黒柱と大黒柱の距離が(項目入力をＮと定義＝仮に800mm）以上ある場合は
+　その半分で補強用のフレームを追加する事
+
+5.パネル計算
+　アルミフレームの外側にパネルを取り付けます。
+　厚み　：　5mm
+　色　：　透明
+　穴　：　φ6
+　フレームの内寸　：　外形1000 x 1000　＝ 太さ30mmの場合は、940mm
+　フレームの内寸　：　外形1000 x 1000　＝ 太さ40mmの場合は、920mm
+
+
+組み方
+　高さ：1000mm 幅：600mm　奥行800mm場合
+　　①高さを1000mm - フレームキャップの高さを算出(Z)とする
+　　②
+
+
+-太さ
+
+
