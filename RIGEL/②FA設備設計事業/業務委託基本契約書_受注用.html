@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>業務委託基本契約書（受注用）｜株式会社RIGEL</title>
+<style>
+  /* ===== 用紙設定：A4 縦向き ===== */
+  @page {
+    size: A4 portrait;
+    margin: 20mm 18mm 18mm;
+  }
+
+  :root {
+    --ink: #14181d;
+    --ink-sub: #5a636e;
+    --rule: #c9ced6;
+    --rule-strong: #2b3138;
+    --accent: #1f4e79;
+    --paper: #ffffff;
+    --desk: #e8eaed;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--desk);
+    color: var(--ink);
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP",
+                 "MS PMincho", serif;
+    font-size: 10.5pt;
+    line-height: 1.85;
+    text-align: justify;
+    word-break: normal;
+    line-break: strict;
+  }
+
+  /* ===== 用紙（縦長） ===== */
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 12mm auto;
+    padding: 20mm 18mm 18mm;
+    background: var(--paper);
+    box-shadow: 0 2px 14px rgba(0,0,0,.18);
+  }
+
+  /* ===== 表題 ===== */
+  .doc-title {
+    font-size: 19pt;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .5em;
+    text-indent: .5em;
+    margin: 6mm 0 3mm;
+  }
+
+  .doc-meta {
+    text-align: center;
+    font-size: 8.5pt;
+    color: var(--ink-sub);
+    letter-spacing: .04em;
+    margin-bottom: 8mm;
+    padding-bottom: 4mm;
+    border-bottom: 1.6pt solid var(--rule-strong);
+  }
+
+  .preamble {
+    margin: 0 0 7mm;
+    text-indent: 1em;
+  }
+
+  /* ===== 条文 ===== */
+  article.clause {
+    margin: 0 0 5.5mm;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  article.clause > h2 {
+    font-size: 11pt;
+    font-weight: 700;
+    margin: 0 0 1.5mm;
+    border-left: 3.5pt solid var(--accent);
+    padding-left: .55em;
+    line-height: 1.6;
+  }
+
+  article.clause p {
+    margin: 0 0 1.5mm;
+    text-indent: 1em;
+  }
+  article.clause p.noindent { text-indent: 0; }
+
+  ol.items {
+    margin: 0 0 1.5mm;
+    padding-left: 2.1em;
+  }
+  ol.items > li { margin-bottom: .8mm; }
+
+  ul.dash {
+    margin: .8mm 0 1.5mm;
+    padding-left: 2.4em;
+    list-style: none;
+  }
+  ul.dash > li { position: relative; margin-bottom: .5mm; }
+  ul.dash > li::before { content: "・"; position: absolute; left: -1.1em; }
+
+  .sub-head {
+    font-weight: 700;
+    margin: 2.5mm 0 1mm;
+    text-indent: 0;
+  }
+
+  .amt {
+    font-weight: 700;
+    font-feature-settings: "palt";
+  }
+
+  /* 下請法（取適法）由来の防御条項 */
+  .shield { font-weight: 700; }
+
+  .blank {
+    display: inline-block;
+    min-width: 5em;
+    border-bottom: .8pt solid var(--ink-sub);
+    text-align: center;
+    color: var(--ink-sub);
+  }
+
+  /* ===== 末文・署名欄 ===== */
+  .closing {
+    margin: 8mm 0 0;
+    padding-top: 5mm;
+    border-top: 1pt solid var(--rule);
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .sign-date { margin: 7mm 0 6mm; text-indent: 0; }
+  .sign-area { page-break-inside: avoid; break-inside: avoid; }
+
+  .party { margin-bottom: 8mm; line-height: 2.1; }
+  .party .label { font-weight: 700; margin-right: .5em; }
+  .party .line { display: block; padding-left: 2.2em; }
+  .party .name { font-size: 12pt; font-weight: 700; letter-spacing: .08em; }
+
+  .seal {
+    display: inline-block;
+    width: 13mm; height: 13mm;
+    margin-left: 1.5em;
+    border: .8pt dashed var(--rule);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 13mm;
+    font-size: 7.5pt;
+    color: var(--ink-sub);
+    vertical-align: middle;
+  }
+
+  /* ===== 社内用メモ（印刷時は非表示） ===== */
+  .internal {
+    margin-top: 14mm;
+    padding: 5mm 6mm;
+    border: 1pt dashed #b48a2e;
+    background: #fdf8ec;
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 9pt;
+    line-height: 1.8;
+    color: #4a4133;
+  }
+  .internal h3 { margin: 0 0 2mm; font-size: 10pt; color: #8a6516; }
+  .internal h4 { margin: 4mm 0 1.5mm; font-size: 9.5pt; color: #6d5514; }
+  .internal ul { margin: 0; padding-left: 1.3em; }
+  .internal li { margin-bottom: 1.5mm; }
+  .internal .note {
+    display: block;
+    margin-top: 3mm;
+    font-size: 8pt;
+    color: #8a7c63;
+  }
+
+  .usage-banner {
+    margin: 0 0 7mm;
+    padding: 3mm 4mm;
+    background: #eef3f9;
+    border-left: 3.5pt solid var(--accent);
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.7;
+    color: #2b4a68;
+    text-align: left;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .sheet {
+      width: auto; min-height: 0;
+      margin: 0; padding: 0;
+      box-shadow: none;
+    }
+    .internal, .usage-banner { display: none; }
+  }
+
+  @media screen and (max-width: 230mm) {
+    .sheet {
+      width: 100%;
+      margin: 0;
+      padding: 8mm 6mm;
+      box-shadow: none;
+    }
+    body { font-size: 11pt; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <h1 class="doc-title">業務委託基本契約書</h1>
+  <p class="doc-meta">株式会社RIGEL ／ ②FA設備設計事業　受注用（RIGEL＝乙・請求する側）　v1.0（2026-07-30）</p>
+
+  <p class="usage-banner">
+    <strong>【用途】</strong>本書は <strong>RIGELが元請けから受注し、請求する側</strong>のひな型です（RIGEL＝乙）。
+    RIGELが外注先へ<strong>発注する側</strong>の契約は「外注業務委託契約書」を使用してください。<br>
+    <strong>太字</strong>の条項は、下請法（現・中小受託取引適正化法）がRIGELを保護するために元請けへ課す義務・禁止行為を契約に明記したものです。
+    <span style="font-size:8pt;color:#5d7692;">※このご案内は画面表示のみ。印刷／PDF出力では除外されます。</span>
+  </p>
+
+  <p class="preamble">
+    <span class="blank">元請会社名称</span>（以下「甲」という。）と株式会社RIGEL（以下「乙」という。）とは、甲が乙に委託する業務に関し、次のとおり業務委託基本契約（以下「本契約」という。）を締結する。
+  </p>
+
+  <article class="clause">
+    <h2>第1条（目的）</h2>
+    <p>甲は、甲の事業に関する下記の業務（以下「本業務」という。）を乙に委託し、乙はこれを受託する。本契約は、甲乙間の個別の取引に共通して適用される基本事項を定めるものとする。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第2条（委託業務の内容）</h2>
+    <ol class="items">
+      <li>本業務の内容は、次のとおりとする。
+        <ul class="dash">
+          <li>自動機・省人化設備、治具等の構想設計および詳細設計</li>
+          <li>装置図面・仕様書・部品表等の作成</li>
+          <li>装置・治具の組立</li>
+          <li>現地据付・立上げおよび調整</li>
+          <li>上記に付随する技術的検討・打合せ・立会い</li>
+        </ul>
+      </li>
+      <li>個別の作業範囲・数量・仕様・納期・場所および対価は、第3条に定める個別契約により定める。</li>
+      <li>本契約と個別契約の内容に齟齬がある場合は、個別契約の定めを優先する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第3条（個別契約・発注書面の交付）</h2>
+    <ol class="items">
+      <li>個別契約は、甲が乙に対し注文書を交付し、乙がこれに対し注文請書を交付することにより成立する。</li>
+      <li class="shield">甲は、乙に本業務を委託したときは、直ちに、委託内容、対価の額、支払期日、支払方法その他必要な事項を記載した書面（電磁的方法を含む。）を乙に交付する。</li>
+      <li class="shield">甲が前項の書面を交付しないまま乙に作業の着手を求めた場合であっても、乙は当該作業について本契約および甲の指示内容に従って対価を請求できるものとする。</li>
+      <li>甲が個別契約の内容（仕様・数量・納期等）を変更する場合は、事前に乙と協議し、対価および納期の変更の要否を書面により定める。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第4条（契約期間）</h2>
+    <p>本契約の有効期間は、<span class="blank">　年　月　日</span>から<span class="blank">　年　月　日</span>までの1年間とする。ただし、期間満了の1か月前までに甲乙いずれからも書面による別段の意思表示がないときは、本契約は同一条件でさらに1年間更新されるものとし、以後も同様とする。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第5条（業務委託料）</h2>
+    <ol class="items">
+      <li>本業務の対価（以下「業務委託料」という。）は、個別契約において甲乙協議のうえ定める。</li>
+      <li class="shield">業務委託料の額は、甲乙が協議のうえ決定するものとし、甲が一方的に定めることはできない。</li>
+      <li>業務委託料には、本業務の遂行に必要な設計・製作等の労務費および乙の一般管理費を含むものとする。ただし、第6条に定める交通費・移動時間費・宿泊費、ならびに甲乙が別途合意した費用はこれに含まない。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第6条（交通費・移動時間費・宿泊費）</h2>
+    <p>本業務の遂行に伴い乙に生じる交通費、移動時間費および宿泊費については、業務委託料とは別に、次の各号の基準により乙が甲に請求できるものとする。</p>
+
+    <p class="sub-head">（1）交通費</p>
+    <ol class="items">
+      <li>本業務の遂行に伴う交通費は、業務委託料とは別途請求できるものとする。</li>
+      <li>交通費は、次の基準により算出する。
+        <ul class="dash">
+          <li>自動車移動の場合：1kmあたり<span class="amt">45円</span></li>
+          <li>公共交通機関を利用する場合：<span class="amt">実費精算</span></li>
+        </ul>
+      </li>
+      <li>高速道路料金、有料道路料金および駐車場料金は、前号の交通費とは別に、実費で請求できるものとする。</li>
+    </ol>
+
+    <p class="sub-head">（2）移動時間費</p>
+    <ol class="items">
+      <li>本業務の遂行に伴う移動時間は、費用として請求できるものとする。</li>
+      <li>移動時間の単価は、1時間あたり<span class="amt">6,000円</span>とする。</li>
+      <li>移動時間の算定は、原則として「片道移動時間 × 2（往復時間）」とする。</li>
+      <li>移動時間の請求時間について<span class="amt">上限は設けない</span>。</li>
+    </ol>
+
+    <p class="sub-head">（3）宿泊費</p>
+    <ol class="items">
+      <li>本業務の遂行上、宿泊が必要となる場合は、宿泊費を請求できるものとする。</li>
+      <li>宿泊費は実費精算によらず、1泊あたり<span class="amt">15,000円</span>の定額とする。</li>
+    </ol>
+
+    <p class="sub-head">（4）請求手続</p>
+    <p>前各号の費用は、乙が算定根拠（走行距離、移動時間、宿泊日数等）を明示した書面（領収書の写しを含む。）を甲に提出し、業務委託料と併せて第7条の定めに従い請求する。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第7条（支払方法）</h2>
+    <ol class="items">
+      <li>乙は、毎月末日締めで当月分の業務委託料および第6条の費用を集計し、翌月10日までに甲に請求する。</li>
+      <li class="shield">甲は、乙から本業務の成果を受領した日から起算して60日以内のできる限り短い期間内において定めた支払期日までに、業務委託料および第6条の費用を支払う。具体的には、乙の請求書に基づき、締切日の属する月の翌月末日までに支払うものとする。</li>
+      <li>支払は、乙の指定する銀行口座への振込送金の方法による。振込手数料は甲の負担とする。</li>
+      <li class="shield">甲は、業務委託料の支払につき、手形その他支払期日までに現金化が困難となる手段を用いてはならない。</li>
+      <li>消費税および地方消費税は、業務委託料および第6条の費用に加算して支払う。</li>
+      <li class="shield">甲が前項までに定める支払期日までに支払を行わないときは、支払期日の翌日から支払済みに至るまで、年14.6％の割合による遅延利息を乙に支払う。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第8条（納期・検収）</h2>
+    <ol class="items">
+      <li>乙は、個別契約で定めた納期までに本業務を完了し、その成果を甲に引き渡す。</li>
+      <li>甲は、引渡しを受けた日から10日以内に検査を行い、合否を乙に通知する。当該期間内に甲から通知がないときは、検査に合格したものとみなす。</li>
+      <li class="shield">甲は、乙の責めに帰すべき事由がある場合を除き、本業務の成果の受領を拒み、または受領後に返品することはできない。</li>
+      <li class="shield">甲は、乙の責めに帰すべき事由がある場合を除き、費用を負担することなく本業務のやり直しまたは仕様の変更を求めることはできない。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第9条（契約不適合責任）</h2>
+    <ol class="items">
+      <li>本業務の成果に、種類、品質または数量に関して契約の内容に適合しないもの（以下「契約不適合」という。）があった場合、甲は乙に対し、検収完了後1年以内に限り、修補または代替履行を請求することができる。</li>
+      <li>前項の契約不適合が、甲の支給品等、甲の提示した仕様もしくは甲の指示に起因する場合、または甲以外の第三者が製作・改造した部分に起因する場合は、乙は責任を負わない。</li>
+      <li class="shield">乙が本条に基づき負う責任の総額は、当該個別契約に係る業務委託料の額を上限とする。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第10条（知的財産権）</h2>
+    <ol class="items">
+      <li>本業務の遂行の過程で新たに生じた図面、仕様書その他の成果物およびこれらに関する著作権その他の知的財産権は、業務委託料の支払完了をもって甲に帰属する。</li>
+      <li class="shield">前項にかかわらず、乙が本契約締結前から保有していた知的財産権、汎用的な設計手法・技術情報・ノウハウ、および乙が独自に開発した標準部品構成・標準ユニット（以下「乙の既存知財」という。）は、乙に留保される。甲への成果物の引渡しは、乙の既存知財の譲渡を意味しない。</li>
+      <li>成果物に乙の既存知財が含まれる場合、乙は甲に対し、当該成果物を甲の事業の範囲内で使用するために必要な限度で、非独占的な利用を許諾する。</li>
+      <li class="shield">乙は、乙の既存知財を他の顧客に対する業務においても継続して使用することができる。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第11条（秘密保持）</h2>
+    <ol class="items">
+      <li>甲および乙は、本契約の遂行に関して知り得た相手方の技術上、営業上その他一切の情報を秘密として保持し、相手方の事前の書面による承諾なく第三者に開示または漏洩してはならず、本業務の目的以外に使用してはならない。</li>
+      <li>次の情報は、前項の秘密情報に含まれない。
+        <ul class="dash">
+          <li>開示を受けた時点で既に公知であった情報、または受領者の責めによらず公知となった情報</li>
+          <li>開示を受けた時点で既に受領者が保有していた情報</li>
+          <li>受領者が第三者から秘密保持義務を負うことなく適法に取得した情報</li>
+          <li>受領者が独自に開発した情報</li>
+        </ul>
+      </li>
+      <li>前各項の義務は、本契約終了後も3年間存続する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第12条（再委託）</h2>
+    <ol class="items">
+      <li class="shield">乙は、本業務の全部または一部を第三者に再委託することができる。ただし、組立作業その他甲の事業所または甲の顧客先で行う作業を再委託する場合は、事前に甲へ通知する。</li>
+      <li>乙は、再委託先に本契約と同等の秘密保持義務を負わせ、再委託先の行為について甲に対し責任を負う。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第13条（支給品・貸与品）</h2>
+    <ol class="items">
+      <li>甲は、本業務の遂行に必要な図面、材料、部品、治具、工具等（以下「支給品等」という。）を乙に支給または貸与することがある。</li>
+      <li>乙は、支給品等を善良な管理者の注意をもって管理し、本業務以外の目的に使用しない。本業務の完了後または甲の請求があったときは、乙は速やかに支給品等を甲に返還する。</li>
+      <li class="shield">甲が乙に有償で支給する原材料等がある場合、甲は、当該原材料等を用いた成果物に係る業務委託料の支払期日より前に、その対価を乙に支払わせ、または業務委託料から控除してはならない。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第14条（安全衛生・労働災害）</h2>
+    <ol class="items">
+      <li>乙は、現地作業その他本業務の遂行にあたり、労働安全衛生法その他関係法令および作業場所の管理者が定める安全規則を遵守する。</li>
+      <li>甲は、乙が甲の事業所または甲の顧客先で作業を行う場合、当該作業場所の危険性に関する情報を事前に乙へ提供する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第15条（独立当事者の関係）</h2>
+    <ol class="items">
+      <li class="shield">乙は独立した事業者として、自己の裁量と責任において本業務を遂行する。本契約は甲乙間に雇用関係または労働者派遣関係を生じさせるものではない。</li>
+      <li class="shield">甲は、乙またはその従業員等に対し、業務の遂行方法、作業時間、作業順序等に関する具体的な指揮命令を行わない。甲から乙への連絡は、成果物の仕様・納期・品質に関する要請として行う。</li>
+      <li>乙は、本業務に従事する者の労務管理、就業時間の管理および安全衛生管理を自己の責任において行う。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第16条（不当な取扱いの禁止）</h2>
+    <p>甲は、乙に対し、次の各号に掲げる行為を行ってはならない。</p>
+    <ol class="items">
+      <li class="shield">個別契約で定めた業務委託料の額を、乙の責めに帰すべき事由がないにもかかわらず減額すること。</li>
+      <li class="shield">通常支払われる対価に比し著しく低い額を、乙と十分な協議を行うことなく一方的に定めること。</li>
+      <li class="shield">自己の指定する物の購入または役務の利用を、正当な理由なく乙に強制すること。</li>
+      <li class="shield">本契約または個別契約に関し、乙が権利を主張し、または関係行政機関に事実を申告したことを理由として、取引数量の削減、取引停止その他不利益な取扱いをすること。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第17条（損害賠償）</h2>
+    <ol class="items">
+      <li>甲または乙は、本契約に違反し、または本業務の遂行に関して相手方に損害を与えたときは、相手方に対しその損害を賠償する。</li>
+      <li class="shield">乙が本契約および個別契約に関して負う損害賠償責任の総額は、当該損害の原因となった個別契約に係る業務委託料の額を上限とする。ただし、乙の故意または重大な過失による場合は、この限りでない。</li>
+      <li class="shield">乙は、逸失利益、事業機会の喪失、データの喪失その他の間接損害・特別損害について責任を負わない。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第18条（反社会的勢力の排除）</h2>
+    <ol class="items">
+      <li>甲および乙は、自己または自己の役員等が暴力団、暴力団員その他の反社会的勢力（以下「反社会的勢力」という。）に該当せず、かつ将来にわたっても該当しないことを表明し、保証する。</li>
+      <li>甲または乙は、相手方が前項に違反した場合、何らの催告を要せず直ちに本契約の全部または一部を解除でき、これにより相手方に損害が生じても賠償の責任を負わない。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第19条（権利義務の譲渡禁止）</h2>
+    <p>甲および乙は、相手方の事前の書面による承諾なく、本契約上の地位または本契約から生じる権利義務の全部もしくは一部を第三者に譲渡し、または担保に供してはならない。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第20条（契約解除）</h2>
+    <ol class="items">
+      <li>甲または乙は、相手方が次の各号のいずれかに該当したときは、催告なく直ちに本契約または個別契約の全部もしくは一部を解除することができる。
+        <ul class="dash">
+          <li>本契約に違反し、相当の期間を定めた催告後もこれを是正しないとき。</li>
+          <li>支払停止もしくは支払不能となり、または破産手続開始、民事再生手続開始その他の倒産手続の申立てがあったとき。</li>
+          <li>差押え、仮差押え、仮処分または滞納処分を受けたとき。</li>
+          <li>前各号のほか、本契約を継続し難い重大な事由が生じたとき。</li>
+        </ul>
+      </li>
+      <li class="shield">甲の都合により個別契約が解除または中止された場合、甲は、解除等の時点までに乙が実施した業務に相当する対価および乙が既に支出した費用を乙に支払う。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2>第21条（存続条項）</h2>
+    <p>本契約が期間満了または解除により終了した場合であっても、第9条（契約不適合責任）、第10条（知的財産権）、第11条（秘密保持）、第17条（損害賠償）および第23条（合意管轄）の規定は、なお有効に存続する。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第22条（協議事項）</h2>
+    <p>本契約に定めのない事項または本契約の解釈に疑義が生じた事項については、甲乙誠実に協議のうえ解決する。</p>
+  </article>
+
+  <article class="clause">
+    <h2>第23条（合意管轄）</h2>
+    <p>本契約に関して生じる一切の紛争については、<span class="blank">　地方裁判所</span>を第一審の専属的合意管轄裁判所とする。</p>
+  </article>
+
+  <div class="closing">
+    <p style="text-indent:1em;">本契約の成立を証するため、本書2通を作成し、甲乙記名押印のうえ、各1通を保有する。</p>
+
+    <p class="sign-date"><span class="blank">　　年　月　日</span></p>
+
+    <div class="sign-area">
+      <div class="party">
+        <span class="label">甲</span>〒<span class="blank">　　　　</span>　<span class="blank">所在地</span>
+        <span class="line name"><span class="blank">元請会社名称</span></span>
+        <span class="line"><span class="blank">代表者役職・氏名</span><span class="seal">印</span></span>
+      </div>
+
+      <div class="party">
+        <span class="label">乙</span>〒<span class="blank">　　　　</span>　<span class="blank">所在地</span>
+        <span class="line name">株式会社RIGEL</span>
+        <span class="line">代表取締役　佐藤　貴久<span class="seal">印</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 社内用メモ：印刷時は出力されません -->
+  <aside class="internal">
+    <h3>運用メモ（社内用／契約書本体には含めない）</h3>
+
+    <h4>下請法（現・中小受託取引適正化法）について</h4>
+    <ul>
+      <li>RIGELは資本金300万円のため、<strong>RIGELが保護される側（下請事業者／中小受託事業者）</strong>に該当する見込み。元請けの資本金が1,000万円超であれば、製造委託・修理委託として適用対象となる可能性が高い。</li>
+      <li>太字にした条項（第3条2・3項、第5条2項、第7条2・4・6項、第8条3・4項、第13条3項、第16条）は、この法律が親事業者（委託事業者）に課す義務・禁止行為を契約に落とし込んだもの。<strong>法律上当然に適用されるが、契約書に明記しておくと交渉・請求の根拠として使いやすい。</strong></li>
+      <li>2026年1月施行の改正により、資本金基準に加えて<strong>従業員数基準</strong>が追加され、また<strong>手形払いが禁止</strong>された。最新の適用範囲は公正取引委員会・中小企業庁の資料で要確認。</li>
+    </ul>
+
+    <h4>元請けが現職の会社であることに伴う固有の論点</h4>
+    <ul>
+      <li><strong>競業避止義務</strong>：退職時の誓約書・就業規則に競業避止条項がある場合、退職後にRIGELとして同社および同業他社と取引することの可否を、退職前に必ず確認する。</li>
+      <li><strong>実質的な雇用の継続とみなされるリスク</strong>：業務実態が在職時と変わらない（常駐・指揮命令下・単一取引先）と、税務上「給与所得」と認定されたり、労働者性を認められたりするおそれがある。第15条を置いたうえで、<strong>取引先を複数持つ・作業場所と時間の裁量を確保する</strong>ことが実務上の防御になる。</li>
+      <li><strong>秘密保持義務の承継</strong>：在職中に知り得た情報の取扱いは、退職後も従前の義務が及ぶ。本契約第11条とは別枠の問題として整理する。</li>
+    </ul>
+
+    <h4>その他の確認事項</h4>
+    <ul>
+      <li><strong>収入印紙</strong>：本契約は金額の定めのない継続的取引の基本契約（第7号文書）として一律4,000円の可能性。個別の注文請書が請負（第2号文書）に該当する場合は、契約金額に応じた印紙が別途必要。</li>
+      <li><strong>インボイス制度</strong>：元請けが課税事業者の場合、適格請求書発行事業者への登録が事実上必要。登録すると資本金1,000万円未満でも初年度から消費税の納税義務が生じる点に留意。</li>
+      <li><strong>賠償責任保険</strong>：現地据付・立上げでの対物／対人事故に備え、請負業者賠償責任保険（生産物賠償責任保険を含む）への加入を検討する。第17条で上限を設けても、保険がなければ実損は自社負担となる。</li>
+    </ul>
+
+    <span class="note">※ このブロックは画面表示のみ。ブラウザの印刷／PDF出力では自動的に除外されます。</span>
+  </aside>
+
+</div>
+
+</body>
+</html>

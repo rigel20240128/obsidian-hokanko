@@ -221,6 +221,18 @@
     color: #8a7c63;
   }
 
+  .usage-banner {
+    margin: 0 0 7mm;
+    padding: 3mm 4mm;
+    background: #eef3f9;
+    border-left: 3.5pt solid var(--accent);
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 8.5pt;
+    line-height: 1.7;
+    color: #2b4a68;
+    text-align: left;
+  }
+
   /* ===== 印刷 ===== */
   @media print {
     body { background: #fff; }
@@ -231,7 +243,7 @@
       padding: 0;
       box-shadow: none;
     }
-    .internal { display: none; }
+    .internal, .usage-banner { display: none; }
   }
 
   /* ===== 画面が狭い場合 ===== */
@@ -251,7 +263,13 @@
 <div class="sheet">
 
   <h1 class="doc-title">業務委託契約書</h1>
-  <p class="doc-meta">株式会社RIGEL ／ ②FA設備設計事業　外注委託用　v1.0（2026-07-30）</p>
+  <p class="doc-meta">株式会社RIGEL ／ ②FA設備設計事業　発注用（RIGEL＝甲・支払う側）　v1.0（2026-07-30）</p>
+
+  <p class="usage-banner">
+    <strong>【用途】</strong>本書は <strong>RIGELが外注先へ発注する側</strong>のひな型です（RIGEL＝甲）。
+    RIGELが元請けから<strong>受注し、請求する側</strong>の契約は「業務委託基本契約書_受注用」を使用してください。
+    <span style="font-size:8pt;color:#5d7692;">※このご案内は画面表示のみ。印刷／PDF出力では除外されます。</span>
+  </p>
 
   <p class="preamble">
     株式会社RIGEL（以下「甲」という。）と<span class="blank">外注先名称</span>（以下「乙」という。）とは、甲が乙に委託する業務に関し、次のとおり業務委託契約（以下「本契約」という。）を締結する。
