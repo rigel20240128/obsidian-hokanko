@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>業務委託基本契約書(サンエイテック)｜株式会社RIGEL</title>
+<style>
+  /* === RIGEL資料作成ルール_統合版 v1.3 準拠 ===
+     第4章 印刷/PDF文書の規定（契約書・提案書・仕様書・報告書） */
+  @page { size: A4 portrait; margin: 30mm 14mm 18mm; }
+
+  :root{
+    --main:#026881;      /* ジュビリーブルー（1.2 絶対不可変） */
+    --dark:#014B5D;      /* ジュビリーブルー・ダーク */
+    --light:#74ACBA;     /* ジュビリーブルー・ライト */
+    --grey:#C7CBD3;      /* ミッドグレー */
+    --ink:#17181A;       /* 近似ブラック（本文） */
+    --sub:#6B6E73;       /* サブ文字 */
+    --rule:#E3E1DB;      /* 罫線 */
+    --paper:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:var(--paper);}
+  body{
+    font-family:"Noto Sans JP","Noto Sans CJK JP","Yu Gothic","Hiragino Sans",sans-serif;
+    font-size:10.5pt; font-weight:400; line-height:1.85;
+    color:var(--ink); text-align:justify; line-break:strict;
+  }
+
+  /* --- ヘッダー：右上にロゴのみ＋直下に区切り線（4.2） --- */
+  .hdr{ position:fixed; top:-19mm; left:0; right:0; }
+  .hdr img{ display:block; margin-left:auto; height:16mm; width:auto; } /* 1.1 下限15mm/28mm を満たす */
+  .hdr .bar{ margin-top:2.5mm; height:1.2pt; background:var(--main); }
+
+  /* --- フッター：文書名／日付を小さく（4.2） --- */
+  .ftr{
+    position:fixed; bottom:-12mm; left:0; right:0;
+    font-size:7.5pt; color:var(--sub); letter-spacing:.04em;
+    display:flex; justify-content:space-between;
+  }
+
+  /* --- タイトル：中央・太字＋サブに当事者名（4.2） --- */
+  .title{ font-size:19pt; font-weight:900; color:var(--ink);
+    text-align:center; letter-spacing:.4em; text-indent:.4em; margin:2mm 0 2.5mm; }
+  .subtitle{ text-align:center; font-size:9pt; color:var(--sub);
+    letter-spacing:.05em; margin-bottom:8mm; }
+
+  .preamble{ margin:0 0 7mm; text-indent:1em; }
+
+  /* --- 条：章の途中でページを割らない（4.1・厳守） --- */
+  article.clause{ margin:0 0 6mm; break-inside:avoid; page-break-inside:avoid; }
+  article.clause > h2{
+    display:flex; align-items:baseline; gap:.6em;
+    border-left:3.5pt solid var(--main); padding-left:.6em;
+    margin:0 0 2mm; break-after:avoid; page-break-after:avoid;
+  }
+  h2 .num{ font-size:17pt; font-weight:900; color:var(--main); letter-spacing:.02em; }  /* 4.3 固定値 */
+  h2 .ttl{ font-size:14pt; font-weight:700; color:var(--dark); }                        /* 4.3 固定値 */
+
+  article.clause p{ margin:0 0 1.5mm; text-indent:1em; }
+  ol.items{ margin:0 0 1.5mm; padding-left:2.2em; }
+  ol.items > li{ margin-bottom:1mm; }
+  ol.items > li::marker{ color:var(--main); font-weight:500; }
+  ul.dash{ margin:1mm 0 1.5mm; padding-left:2.4em; list-style:none; }
+  ul.dash > li{ position:relative; margin-bottom:.6mm; }
+  ul.dash > li::before{ content:"—"; position:absolute; left:-1.3em; color:var(--light); font-weight:700; }
+  .amt{ font-weight:700; color:var(--dark); font-feature-settings:"palt"; }
+  .blank{ display:inline-block; min-width:5em; border-bottom:.8pt solid var(--sub);
+          text-align:center; color:var(--sub); }
+
+  /* --- 表：ヘッダー行は #026881 塗り・白文字（4.2） --- */
+  table.role{ width:100%; border-collapse:collapse; margin:2mm 0 2mm; font-size:9.5pt;
+              break-inside:avoid; page-break-inside:avoid; }
+  table.role th{ background:var(--main); color:#fff; font-weight:700;
+                 border:.5pt solid var(--main); padding:1.6mm 2.5mm; text-align:left; }
+  table.role td{ border:.5pt solid var(--rule); padding:1.6mm 2.5mm; vertical-align:top; }
+
+  /* --- 署名欄：甲/乙を2カラム（4.2） --- */
+  .closing{ margin:9mm 0 0; padding-top:5mm; border-top:1pt solid var(--rule);
+            break-inside:avoid; page-break-inside:avoid; }
+  .sign-date{ margin:6mm 0 6mm; font-weight:700; }
+  .parties{ display:flex; gap:8mm; break-inside:avoid; page-break-inside:avoid; }
+  .party{ flex:1; padding-left:3.5mm; border-left:2pt solid var(--main); line-height:2.0; }
+  .party .label{ font-weight:900; color:var(--main); margin-right:.5em; }
+  .party .name{ display:block; font-size:11pt; font-weight:700; letter-spacing:.06em; margin-top:1mm; }
+  .party .rep{ display:block; margin-top:1mm; }
+  .seal{ display:inline-block; width:12mm; height:12mm; margin-left:1em;
+         border:.8pt dashed var(--light); border-radius:50%; text-align:center;
+         line-height:12mm; font-size:7pt; color:var(--sub); vertical-align:middle; }
+
+  @media screen{
+    body{ background:var(--rule); }
+    .sheet{ width:210mm; min-height:297mm; margin:10mm auto; padding:26mm 14mm 18mm;
+            background:#fff; box-shadow:0 2px 12px rgba(0,0,0,.15); }
+  }
+</style></head>
+<body>
+
+
+<div class="sheet">
+  <h1 class="title">業務委託基本契約書</h1>
+  <p class="subtitle">甲：株式会社サンエイテック　／　乙：株式会社RIGEL</p>
+
+  <p class="preamble">株式会社サンエイテック（以下「甲」という。）と株式会社RIGEL（以下「乙」という。）とは、甲が乙に委託する設計業務に関し、次のとおり業務委託基本契約（以下「本契約」という。）を締結する。</p>
+
+  <article class="clause">
+    <h2><span class="num">第1条</span><span class="ttl">目的</span></h2>
+    <p>甲は、甲の事業に関する設計業務を乙に委託し、乙はこれを受託する。本契約は、案件ごとの取引に共通して適用される事項を定めるものとする。</p>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第2条</span><span class="ttl">委託業務の内容</span></h2>
+    <ol class="items">
+      <li>乙が受託する業務（以下「本業務」という。）は、次のとおりとする。
+        <ul class="dash"><li>設備構想図</li><li>治具設計</li><li>電気回路図</li><li>空圧回路図</li></ul>
+      </li>
+      <li>個別の作業範囲、仕様および納期は、案件ごとに定める。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第3条</span><span class="ttl">業務の進め方</span></h2>
+    <ol class="items">
+      <li>甲は、専属担当者（<span class="blank">　　　　</span>様）を通じて乙に業務を依頼し、要求仕様、設計に必要な情報および要求納期を乙に提示する。</li>
+      <li>乙は、設計に着手する前に、設計の方向性を示す資料を甲に提出する。当該資料の作成に要する工数は、第6条の対価の対象に含む。</li>
+      <li>乙は、前項の資料について甲の承認を得た後に設計を開始する。</li>
+      <li>設計ソフトは、3次元CAD（ICAD SX）とする。</li>
+      <li>ICAD SXは乙が準備する。</li>
+      <li>甲の提示した情報に不足がある場合、乙は都度、甲の担当者と協議する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第4条</span><span class="ttl">提出物</span></h2>
+    <p>乙は、本業務の成果として次の資料を甲に提出する。</p>
+    <ul class="dash">
+      <li>設備構想図（部品表）</li><li>電気回路図</li><li>空圧回路図</li>
+      <li>CADデータをメールにて納品</li>
+    </ul>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第5条</span><span class="ttl">責任の所在</span></h2>
+    <table class="role">
+      <thead><tr><th>甲が行うこと</th><th>乙が行うこと</th></tr></thead>
+      <tbody>
+        <tr><td>要求仕様・設計に必要な情報・要求納期の提示</td><td>設計の方向性を示す資料の提出</td></tr>
+        <tr><td>方向性資料の承認</td><td>承認後の設計の実施</td></tr>
+        <tr><td>成果物の最終確認および構造上の責任</td><td>第4条の提出物の作成</td></tr>
+        <tr><td>注文書の発行および支払</td><td>納期の遵守／ICAD SXの準備</td></tr>
+      </tbody>
+    </table>
+    <ol class="items">
+      <li>乙は、甲の提示した要求仕様に基づき設計を行う。成果物の最終的な確認および構造上の責任は、甲が負うものとする。</li>
+      <li>甲による情報の提供の遅延または仕様の変更により納期に影響が生じた場合、当該遅延は乙の責めに帰さないものとし、納期は甲乙協議のうえ変更する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第6条</span><span class="ttl">報酬および費用の単価</span></h2>
+    <ol class="items">
+      <li>本業務の対価は、乙が要した工数に次の単価を乗じて算出する。
+        <ul class="dash">
+          <li>設計業務：1時間あたり<span class="amt">12,000円</span>（税別）</li>
+          <li>移動時間：1時間あたり<span class="amt">6,000円</span>（税別）</li>
+        </ul>
+      </li>
+      <li>乙は、前項の対価とは別に、業務の遂行に伴い発生した以下の費用を、業務報酬に含めて甲に請求するものとする。
+        <ul class="dash">
+          <li>車での移動費：1kmあたり<span class="amt">45円</span>（税別）</li>
+          <li>公共交通機関での移動費用：<span class="amt">実費</span>（税別）</li>
+          <li>高速道路料金、有料道路料金および駐車場料金：<span class="amt">実費</span>（税別）</li>
+          <li>宿泊費：1泊あたり<span class="amt">15,000円</span>の定額（税別）</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第7条</span><span class="ttl">見積・注文・請求・支払</span></h2>
+    <ol class="items">
+      <li>乙は、毎月25日を締め日として当月の工数および費用を計算し、同日までに甲へ見積書を提出する。</li>
+      <li>甲は、前項の見積書を確認のうえ、当月末日までに乙へ注文書を発行する。</li>
+      <li>乙は、注文書の受領後、甲に対して適格請求書を発行する。</li>
+      <li>甲は、適格請求書を受領した翌月の25日までに、乙が指定する銀行口座へ現金振込の方法により報酬を支払う。なお、振込手数料は甲の負担とする。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第8条</span><span class="ttl">成果物の権利</span></h2>
+    <p>本業務により作成された設計データその他の成果物に関する権利は、甲に帰属する。</p>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第9条</span><span class="ttl">秘密保持</span></h2>
+    <ol class="items">
+      <li>甲および乙は、本業務に関して知り得た相手方の技術上および営業上の情報を秘密として保持し、相手方の承諾なく第三者に開示せず、本業務の目的以外に使用しない。</li>
+      <li>次の情報は、前項の秘密情報に含まれない。
+        <ul class="dash">
+          <li>既に公知であった情報、または受領者の責めによらず公知となった情報</li>
+          <li>受領者が既に保有していた情報、または独自に開発した情報</li>
+        </ul>
+      </li>
+      <li>本条の義務は、本契約の終了後も3年間存続する。</li>
+    </ol>
+  </article>
+
+  <article class="clause">
+    <h2><span class="num">第10条</span><span class="ttl">協議事項</span></h2>
+    <p>本契約に定めのない事項または本契約の解釈に疑義が生じた事項については、甲乙誠実に協議のうえ解決する。</p>
+  </article>
+
+  <div class="closing">
+    <p style="text-indent:1em;">本契約の成立を証するため、本書2通を作成し、甲乙記名押印のうえ、各1通を保有する。</p>
+    <p class="sign-date">2026年11月11日</p>
+    <div class="parties">
+      <div class="party">
+        <span class="label">甲</span>〒277-0005　千葉県柏市柏7-1-15
+        <span class="name">株式会社サンエイテック</span>
+        <span class="rep">代表取締役社長　神谷　雄太郎<span class="seal">印</span></span>
+      </div>
+      <div class="party">
+        <span class="label">乙</span>〒277-0884　千葉県柏市みどり台1-8-17
+        <span class="name">株式会社RIGEL</span>
+        <span class="rep">代表取締役社長　佐藤　貴久<span class="seal">印</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body></html>
