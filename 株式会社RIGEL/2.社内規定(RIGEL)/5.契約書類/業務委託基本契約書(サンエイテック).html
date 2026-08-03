@@ -60,6 +60,8 @@
   ol.items > li{ margin-bottom:1mm; }
   ol.items > li::marker{ color:var(--main); font-weight:500; }
   ul.dash{ margin:1mm 0 1.5mm; padding-left:2.4em; list-style:none; }
+  /* 条の直下にある箇条書き（第4条）を、番号付き項目内の箇条書き（第2・6条）と同じ位置に揃える */
+  article.clause > ul.dash{ padding-left:4.6em; }
   ul.dash > li{ position:relative; margin-bottom:.6mm; }
   ul.dash > li::before{ content:"・"; position:absolute; left:-1.1em; color:var(--ink); }
   .amt{ font-weight:700; color:var(--dark); font-feature-settings:"palt"; }
