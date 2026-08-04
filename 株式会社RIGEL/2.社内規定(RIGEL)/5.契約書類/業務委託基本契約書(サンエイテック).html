@@ -60,8 +60,10 @@
   ol.items > li{ margin-bottom:1mm; }
   ol.items > li::marker{ color:var(--main); font-weight:500; }
   ul.dash{ margin:1mm 0 1.5mm; padding-left:2.4em; list-style:none; }
+  /* 条の直下にある箇条書き（第4条）を、番号付き項目内の箇条書き（第2・6条）と同じ位置に揃える */
+  article.clause > ul.dash{ padding-left:4.6em; }
   ul.dash > li{ position:relative; margin-bottom:.6mm; }
-  ul.dash > li::before{ content:"—"; position:absolute; left:-1.3em; color:var(--light); font-weight:700; }
+  ul.dash > li::before{ content:"・"; position:absolute; left:-1.1em; color:var(--ink); }
   .amt{ font-weight:700; color:var(--dark); font-feature-settings:"palt"; }
   .blank{ display:inline-block; min-width:5em; border-bottom:.8pt solid var(--sub);
           text-align:center; color:var(--sub); }
@@ -163,14 +165,14 @@
           <li>移動時間：1時間あたり<span class="amt">6,000円</span>（税別）</li>
         </ul>
       </li>
-      <li>乙は、前項の対価とは別に、業務の遂行に伴い発生した以下の費用を、業務報酬に含めて甲に請求するものとする。
+      <li>乙は、前項の対価とは別に、業務の遂行に伴い発生する移動および宿泊に係る費用を「交通費等」として、業務報酬と併せて甲に請求する。
         <ul class="dash">
-          <li>車での移動費：1kmあたり<span class="amt">45円</span>（税別）</li>
-          <li>公共交通機関での移動費用：<span class="amt">実費</span>（税別）</li>
-          <li>高速道路料金、有料道路料金および駐車場料金：<span class="amt">実費</span>（税別）</li>
-          <li>宿泊費：1泊あたり<span class="amt">15,000円</span>の定額（税別）</li>
+          <li>車での移動：1kmあたり<span class="amt">45円</span></li>
+          <li>宿泊：1泊あたり<span class="amt">15,000円</span></li>
+          <li>公共交通機関の運賃、高速道路料金、有料道路料金および駐車場料金：利用実績に基づき乙が算出する<span class="amt">定額</span></li>
         </ul>
       </li>
+      <li>本条の金額はいずれも税別とする。</li>
     </ol>
   </article>
 
