@@ -1,0 +1,492 @@
+;===============================================================================
+; Profibus Device Database of HMS Industrial Networks.
+;
+; Model:       Anybus-CompactCom Drive Profile PROFIBUS DP-V1
+; Description: Anybus-CompactCom Drive Profile PROFIBUS DP-V1 slave
+; Language:    English
+; Author:      HMS Industrial Networks
+; WWW:         www.anybus.com
+;
+; Revision log:
+; 1.04   2009-05-13 Updated Software_Release
+; 1.03   2009-03-09 Updated Software_Release
+; 1.02   2009-02-19 Updated Software_Release
+; 1.01   2009-01-23 Updated Hardware_Release
+; 1.00   2008-09-26 First release
+;
+;===============================================================================
+#Profibus_DP
+
+GSD_Revision        = 5
+
+; Device identification
+Vendor_Name         = "HMS Industrial Networks"
+Model_Name          = "Anybus-CC DP DPV1"
+Revision            = "1.04"
+Ident_Number        = 0x1812
+Protocol_Ident      = 0                ; DP protocol
+Station_Type        = 0                ; Slave device
+FMS_supp            = 0                ; FMS not supported
+Slave_Family        = 1                ; Drive
+Hardware_Release    = "Version 2.05"
+Software_Release    = "Version 1.03"
+
+; Supported hardware features
+Redundancy          = 0                ; not supported
+Repeater_Ctrl_Sig   = 2                ; TTL
+24V_Pins            = 0                ; not connected
+Implementation_Type = "NP30"
+
+; Supported DP features
+Freeze_Mode_supp    = 1                ; supported
+Sync_Mode_supp      = 1                ; supported
+Auto_Baud_supp      = 1                ; supported
+Set_Slave_Add_supp  = 1                ; supported
+Fail_Safe           = 1                ; supported
+
+; Supported baudrates
+9.6_supp            = 1
+19.2_supp           = 1
+45.45_supp          = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 1
+12M_supp            = 1
+
+; Maximum responder time for supported baudrates
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_45.45       = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+MaxTsdr_3M          = 50
+MaxTsdr_6M          = 100
+MaxTsdr_12M         = 200
+
+; Maximum polling frequency
+Min_Slave_Intervall = 1                ; 100 us
+
+; I/O related keywords
+Modular_Station     = 1                ; modular
+Max_Module          = 1
+Max_Input_Len       = 64
+Max_Output_Len      = 64
+Max_Data_Len        = 128
+Modul_Offset        = 1
+
+; Diagnostic related keywords
+Max_Diag_Data_Len   = 6
+
+; DPV1 related keywords
+DPV1_Slave 	            = 1
+DPV1_Data_Types         = 0
+Check_Cfg_Mode          = 0
+
+C1_Read_Write_supp      = 1
+C1_Max_Data_Len         = 240
+C1_Response_Timeout     = 10  ;100 ms
+
+C2_Read_Write_supp      = 1
+C2_Max_Data_Len         = 240
+C2_Response_Timeout     = 10  ;100 ms
+C2_Max_Count_Channels   = 1
+Max_Initiate_PDU_Length = 52
+
+Ident_Maintenance_supp  = 1
+
+
+; Parameterization related keywords
+Max_User_Prm_Data_Len      = 140
+Ext_User_Prm_Data_Const(0) = 0xC0,0x00,0x00,0x00,0x00 ;3 DPV1 bytes + 2 reserved
+
+
+ExtUserPrmData = 1 "PNU in Input PZD/1"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 2 "PNU in Input PZD/2"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 3 "PNU in Input PZD/3"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 4 "PNU in Input PZD/4"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 5 "PNU in Input PZD/5"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 6 "PNU in Input PZD/6"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 7 "PNU in Input PZD/7"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 8 "PNU in Input PZD/8"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 9 "PNU in Input PZD/9"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 10 "PNU in Input PZD/10"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 11 "PNU in Input PZD/11"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 12 "PNU in Input PZD/12"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 13 "PNU in Input PZD/13"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 14 "PNU in Input PZD/14"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 15 "PNU in Input PZD/15"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 16 "PNU in Input PZD/16"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 17 "PNU in Input PZD/17"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 18 "PNU in Input PZD/18"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 19 "PNU in Input PZD/19"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 20 "PNU in Input PZD/20"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 21 "PNU in Input PZD/21"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 22 "PNU in Input PZD/22"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 23 "PNU in Input PZD/23"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 24 "PNU in Input PZD/24"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 25 "PNU in Input PZD/25"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 26 "PNU in Input PZD/26"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 27 "PNU in Input PZD/27"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 28 "PNU in Input PZD/28"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 29 "PNU in Input PZD/29"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 30 "PNU in Input PZD/30"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+
+ExtUserPrmData = 31 "PNU in Output PZD/1"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 32 "PNU in Output PZD/2"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 33 "PNU in Output PZD/3"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 34 "PNU in Output PZD/4"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 35 "PNU in Output PZD/5"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 36 "PNU in Output PZD/6"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 37 "PNU in Output PZD/7"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 38 "PNU in Output PZD/8"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 39 "PNU in Output PZD/9"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 40 "PNU in Output PZD/10"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 41 "PNU in Output PZD/11"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 42 "PNU in Output PZD/12"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 43 "PNU in Output PZD/13"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 44 "PNU in Output PZD/14"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 45 "PNU in Output PZD/15"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 46 "PNU in Output PZD/16"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 47 "PNU in Output PZD/17"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 48 "PNU in Output PZD/18"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 49 "PNU in Output PZD/19"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 50 "PNU in Output PZD/20"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 51 "PNU in Output PZD/21"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 52 "PNU in Output PZD/22"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 53 "PNU in Output PZD/23"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 54 "PNU in Output PZD/24"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 55 "PNU in Output PZD/25"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 56 "PNU in Output PZD/26"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 57 "PNU in Output PZD/27"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 58 "PNU in Output PZD/28"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 59 "PNU in Output PZD/29"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+ExtUserPrmData = 60 "PNU in Output PZD/30"
+Unsigned16 0 0-65535
+EndExtUserPrmData
+
+
+; Definition of modules
+Module = "Standard telegram 1" 0xC3, 0xC1, 0xC1, 0xFD, 0x00, 0x01;
+Ext_Module_Prm_Data_len = 8
+1
+EndModule
+;
+Module = "ABCCDP telegram 100" 0xC3, 0xC5, 0xC5, 0xFD, 0x00, 0x64;
+Ext_Module_Prm_Data_len = 24
+Ext_User_Prm_Data_Ref(4)=1
+Ext_User_Prm_Data_Ref(6)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(10)=4
+Ext_User_Prm_Data_Ref(16)=31
+Ext_User_Prm_Data_Ref(18)=32
+Ext_User_Prm_Data_Ref(20)=33
+Ext_User_Prm_Data_Ref(22)=34
+2
+EndModule
+;
+Module = "ABCCDP telegram 101" 0xC3, 0xC9, 0xC9, 0xFD, 0x00, 0x65;
+Ext_Module_Prm_Data_len = 40
+Ext_User_Prm_Data_Ref(4)=1
+Ext_User_Prm_Data_Ref(6)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(10)=4
+Ext_User_Prm_Data_Ref(12)=5
+Ext_User_Prm_Data_Ref(14)=6
+Ext_User_Prm_Data_Ref(16)=7
+Ext_User_Prm_Data_Ref(18)=8
+Ext_User_Prm_Data_Ref(24)=31
+Ext_User_Prm_Data_Ref(26)=32
+Ext_User_Prm_Data_Ref(28)=33
+Ext_User_Prm_Data_Ref(30)=34
+Ext_User_Prm_Data_Ref(32)=35
+Ext_User_Prm_Data_Ref(34)=36
+Ext_User_Prm_Data_Ref(36)=37
+Ext_User_Prm_Data_Ref(38)=38
+3
+EndModule
+;
+Module = "ABCCDP telegram 102" 0xC3, 0xD1, 0xD1, 0xFD, 0x00, 0x66;
+Ext_Module_Prm_Data_len = 72
+Ext_User_Prm_Data_Ref(4)=1
+Ext_User_Prm_Data_Ref(6)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(10)=4
+Ext_User_Prm_Data_Ref(12)=5
+Ext_User_Prm_Data_Ref(14)=6
+Ext_User_Prm_Data_Ref(16)=7
+Ext_User_Prm_Data_Ref(18)=8
+Ext_User_Prm_Data_Ref(20)=9
+Ext_User_Prm_Data_Ref(22)=10
+Ext_User_Prm_Data_Ref(24)=11
+Ext_User_Prm_Data_Ref(26)=12
+Ext_User_Prm_Data_Ref(28)=13
+Ext_User_Prm_Data_Ref(30)=14
+Ext_User_Prm_Data_Ref(32)=15
+Ext_User_Prm_Data_Ref(34)=16
+Ext_User_Prm_Data_Ref(40)=31
+Ext_User_Prm_Data_Ref(42)=32
+Ext_User_Prm_Data_Ref(44)=33
+Ext_User_Prm_Data_Ref(46)=34
+Ext_User_Prm_Data_Ref(48)=35
+Ext_User_Prm_Data_Ref(50)=36
+Ext_User_Prm_Data_Ref(52)=37
+Ext_User_Prm_Data_Ref(54)=38
+Ext_User_Prm_Data_Ref(56)=39
+Ext_User_Prm_Data_Ref(58)=40
+Ext_User_Prm_Data_Ref(60)=41
+Ext_User_Prm_Data_Ref(62)=42
+Ext_User_Prm_Data_Ref(64)=43
+Ext_User_Prm_Data_Ref(66)=44
+Ext_User_Prm_Data_Ref(68)=45
+Ext_User_Prm_Data_Ref(70)=46
+4
+EndModule
+;
+Module = "ABCCDP telegram 103" 0xC3, 0xDF, 0xDF, 0xFD, 0x00, 0x67;
+Ext_Module_Prm_Data_len = 128
+Ext_User_Prm_Data_Ref(4)=1
+Ext_User_Prm_Data_Ref(6)=2
+Ext_User_Prm_Data_Ref(8)=3
+Ext_User_Prm_Data_Ref(10)=4
+Ext_User_Prm_Data_Ref(12)=5
+Ext_User_Prm_Data_Ref(14)=6
+Ext_User_Prm_Data_Ref(16)=7
+Ext_User_Prm_Data_Ref(18)=8
+Ext_User_Prm_Data_Ref(20)=9
+Ext_User_Prm_Data_Ref(22)=10
+Ext_User_Prm_Data_Ref(24)=11
+Ext_User_Prm_Data_Ref(26)=12
+Ext_User_Prm_Data_Ref(28)=13
+Ext_User_Prm_Data_Ref(30)=14
+Ext_User_Prm_Data_Ref(32)=15
+Ext_User_Prm_Data_Ref(34)=16
+Ext_User_Prm_Data_Ref(36)=17
+Ext_User_Prm_Data_Ref(38)=18
+Ext_User_Prm_Data_Ref(40)=19
+Ext_User_Prm_Data_Ref(42)=20
+Ext_User_Prm_Data_Ref(44)=21
+Ext_User_Prm_Data_Ref(46)=22
+Ext_User_Prm_Data_Ref(48)=23
+Ext_User_Prm_Data_Ref(50)=24
+Ext_User_Prm_Data_Ref(52)=25
+Ext_User_Prm_Data_Ref(54)=26
+Ext_User_Prm_Data_Ref(56)=27
+Ext_User_Prm_Data_Ref(58)=28
+Ext_User_Prm_Data_Ref(60)=29
+Ext_User_Prm_Data_Ref(62)=30
+Ext_User_Prm_Data_Ref(68)=31
+Ext_User_Prm_Data_Ref(70)=32
+Ext_User_Prm_Data_Ref(72)=33
+Ext_User_Prm_Data_Ref(74)=34
+Ext_User_Prm_Data_Ref(76)=35
+Ext_User_Prm_Data_Ref(78)=36
+Ext_User_Prm_Data_Ref(80)=37
+Ext_User_Prm_Data_Ref(82)=38
+Ext_User_Prm_Data_Ref(84)=39
+Ext_User_Prm_Data_Ref(86)=40
+Ext_User_Prm_Data_Ref(88)=41
+Ext_User_Prm_Data_Ref(90)=42
+Ext_User_Prm_Data_Ref(92)=43
+Ext_User_Prm_Data_Ref(94)=44
+Ext_User_Prm_Data_Ref(96)=45
+Ext_User_Prm_Data_Ref(98)=46
+Ext_User_Prm_Data_Ref(100)=47
+Ext_User_Prm_Data_Ref(102)=48
+Ext_User_Prm_Data_Ref(104)=49
+Ext_User_Prm_Data_Ref(106)=50
+Ext_User_Prm_Data_Ref(108)=51
+Ext_User_Prm_Data_Ref(110)=52
+Ext_User_Prm_Data_Ref(112)=53
+Ext_User_Prm_Data_Ref(114)=54
+Ext_User_Prm_Data_Ref(116)=55
+Ext_User_Prm_Data_Ref(118)=56
+Ext_User_Prm_Data_Ref(120)=57
+Ext_User_Prm_Data_Ref(122)=58
+Ext_User_Prm_Data_Ref(124)=59
+Ext_User_Prm_Data_Ref(126)=60
+5
+EndModule
+;
+

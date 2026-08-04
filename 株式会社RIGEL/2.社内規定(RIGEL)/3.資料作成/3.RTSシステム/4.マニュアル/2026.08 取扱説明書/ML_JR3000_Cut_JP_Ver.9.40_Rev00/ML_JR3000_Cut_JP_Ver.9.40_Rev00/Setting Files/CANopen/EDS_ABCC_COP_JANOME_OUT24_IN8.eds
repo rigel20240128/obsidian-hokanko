@@ -1,0 +1,4543 @@
+;-------------------------------------------
+; EDS file for the Anybus-CC CANopen module
+;-------------------------------------------
+
+[FileInfo]
+CreatedBy=Fredrik Risberg, HMS Industrial Networks AB
+ModifiedBy=Yoshiaki Hayakawa, HMS Industrial Networks K.K.
+Description=EDS file for the Anybus-CC CANopen module
+CreationTime=04:38PM
+CreationDate=07-22-2015
+ModificationTime=04:38PM
+ModificationDate=07-22-2015
+FileName=EDS_ABCC_COP_JANOME_R24_W8.EDS
+FileVersion=1
+FileRevision=2
+EDSVersion=4.0
+
+[DeviceInfo]
+VendorName=HMS Industrial Networks AB
+VendorNumber=0x0000001B
+ProductName=Anybus-CC CANopen
+ProductNumber=0x000A
+RevisionNumber=0x00020000
+OrderCode=0
+BaudRate_10=1
+BaudRate_20=1
+BaudRate_50=1
+BaudRate_100=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=1
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=8
+DynamicChannelsSupported=0
+CompactPDO=0
+GroupMessaging=0
+NrOfRXPDO=2
+NrOfTXPDO=6
+LSS_Supported=1
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=0
+Dummy0003=0
+Dummy0004=0
+Dummy0005=1
+Dummy0006=1
+Dummy0007=1
+
+[Comments]
+Lines=4
+Line1=----------------------------------------------------
+Line2=This is the EDS file for Anybus-CC CANopen module
+Line3=in an example application made for custom use.
+Line4=----------------------------------------------------
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[1018]
+ParameterName=Identity Object
+ObjectType=0x9
+SubNumber=5
+
+[1018sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x04
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x04
+
+[1018sub1]
+ParameterName=Vendor ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x0000001B
+PDOMapping=0
+LowLimit=0x0000001B
+HighLimit=0x0000001B
+
+[1018sub2]
+ParameterName=Product Code
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x000A
+PDOMapping=0
+LowLimit=0x0000000A
+HighLimit=0x0000000A
+
+[1018sub3]
+ParameterName=Revision Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00020000
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1018sub4]
+ParameterName=Serial Number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[OptionalObjects]
+SupportedObjects=28
+1=0x1003
+2=0x1005
+3=0x1008
+4=0x100A
+5=0x100C
+6=0x100D
+7=0x1010
+8=0x1011
+9=0x1014
+10=0x1015
+11=0x1016
+12=0x1017
+13=0x1400
+14=0x1401
+15=0x1600
+16=0x1601
+17=0x1800
+18=0x1801
+19=0x1802
+20=0x1803
+21=0x1804
+22=0x1805
+23=0x1A00
+24=0x1A01
+25=0x1A02
+26=0x1A03
+27=0x1A04
+28=0x1A05
+
+[1003]
+ParameterName=Pre Defined Error Field
+ObjectType=0x8
+SubNumber=7
+
+[1003sub0]
+ParameterName=Number Of Errors
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0x0006
+
+[1003sub1]
+ParameterName=Error Field #1
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1003sub2]
+ParameterName=Error Field #2
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1003sub3]
+ParameterName=Error Field #3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1003sub4]
+ParameterName=Error Field #4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1003sub5]
+ParameterName=Error Field #5
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1003sub6]
+ParameterName=Error Field reserved for node internal errors
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0xFFFFFFFF
+
+[1005]
+ParameterName=COB-ID Sync Message
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000080
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=Anybus-CC CANopen
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=2.00
+PDOMapping=0
+
+[100C]
+ParameterName=Guard Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[100D]
+ParameterName=Life Time Factor
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1010]
+ParameterName=Store Parameters
+ObjectType=0x8
+SubNumber=3
+
+[1010sub0]
+ParameterName=Largest subindex supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=2
+HighLimit=2
+
+[1010sub1]
+ParameterName=Store all parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1010sub2]
+ParameterName=Store communication parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1011]
+ParameterName=Restore Default Parameters
+ObjectType=0x8
+SubNumber=4
+
+[1011sub0]
+ParameterName=Largest subindex supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[1011sub1]
+ParameterName=Restore all default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1011sub2]
+ParameterName=Restore communication default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1011sub4]
+ParameterName=Restore application default parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+PDOMapping=0
+
+[1014]
+ParameterName=COB-ID Emergency Message
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x80
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1015]
+ParameterName=Inhibit Time EMCY
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[1016]
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x8
+SubNumber=2
+
+[1016sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+LowLimit=1
+HighLimit=1
+
+[1016sub1]
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00000000
+HighLimit=0x007FFFFF
+
+[1017]
+ParameterName=Producer Heartbeat Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+
+;---------------------------------------------------------
+; Receive PDO Communication Parameter (14xx/16xx) Objects
+;---------------------------------------------------------
+
+[1400]
+ParameterName=Receive PDO 1 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1400sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=2
+HighLimit=2
+
+[1400sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x200
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1400sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1401]
+ParameterName=Receive PDO 2 Parameter
+ObjectType=0x9
+SubNumber=3
+
+[1401sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=2
+HighLimit=2
+
+[1401sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x300
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1401sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1600]
+ParameterName=Receive PDO 1 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1600sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1601]
+ParameterName=Receive PDO 2 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1601sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+
+;---------------------------------------------------------
+; Transmit PDO Communication Parameter (18xx/1Axx) Objects
+;---------------------------------------------------------
+
+[1800]
+ParameterName=Transmit PDO 1 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1800sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1800sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x180
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1800sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1801]
+ParameterName=Transmit PDO 2 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1801sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1801sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x280
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1801sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1801sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1801sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1802]
+ParameterName=Transmit PDO 3 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1802sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1802sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x380
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1802sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1802sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1802sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1803]
+ParameterName=Transmit PDO 4 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1803sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1803sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x480
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1803sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1803sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1803sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1804]
+ParameterName=Transmit PDO 5 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1804sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1804sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x400
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1804sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1804sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1804sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1805]
+ParameterName=Transmit PDO 6 Parameter
+ObjectType=0x9
+SubNumber=5
+
+[1805sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=2
+HighLimit=5
+
+[1805sub1]
+ParameterName=COB-ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=$NODEID+0x500
+PDOMapping=0
+LowLimit=0x00000001
+HighLimit=0xFFFFFFFF
+
+[1805sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=254
+PDOMapping=0
+LowLimit=0
+HighLimit=255
+
+[1805sub3]
+ParameterName=Inhibit Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1805sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=65535
+
+[1A00]
+ParameterName=Transmit PDO 1 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A00sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A01]
+ParameterName=Transmit PDO 2 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A01sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A02]
+ParameterName=Transmit PDO 3 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A02sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A03]
+ParameterName=Transmit PDO 4 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A03sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A04]
+ParameterName=Transmit PDO 5 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A04sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+[1A05]
+ParameterName=Transmit PDO 6 Mapping
+ObjectType=0x9
+SubNumber=1
+
+[1A05sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=4
+
+
+;------------------------------------------
+; Vendor Specific Parameter (20xx) Objects
+;------------------------------------------
+
+[ManufacturerObjects]
+SupportedObjects=64
+1=0x2001
+2=0x2002
+3=0x2003
+4=0x2004
+5=0x2005
+6=0x2006
+7=0x2007
+8=0x2008
+9=0x2009
+10=0x200A
+11=0x200B
+12=0x200C
+13=0x200D
+14=0x200E
+15=0x200F
+16=0x2010
+17=0x2011
+18=0x2012
+19=0x2013
+20=0x2014
+21=0x2015
+22=0x2016
+23=0x2017
+24=0x2018
+25=0x2019
+26=0x201A
+27=0x201B
+28=0x201C
+29=0x201D
+30=0x201E
+31=0x201F
+32=0x2020
+33=0x2021
+34=0x2022
+35=0x2023
+36=0x2024
+37=0x2025
+38=0x2026
+39=0x2027
+40=0x2028
+41=0x2029
+42=0x202A
+43=0x202B
+44=0x202C
+45=0x202D
+46=0x202E
+47=0x202F
+48=0x2030
+49=0x2031
+50=0x2032
+51=0x2033
+52=0x2034
+53=0x2035
+54=0x2036
+55=0x2037
+56=0x2038
+57=0x2039
+58=0x203A
+59=0x203B
+60=0x203C
+61=0x203D
+62=0x203E
+63=0x203F
+64=0x2040
+
+[2001]
+ParameterName=Reg100 - 103 / Relay1000 - 103F
+ObjectType=0x8
+SubNumber=5
+
+[2001sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2001sub1]
+ParameterName=Reg100 / Relay1000_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2001sub2]
+ParameterName=Reg101 / Relay1010_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2001sub3]
+ParameterName=Reg102 / Relay1020_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2001sub4]
+ParameterName=Reg103 / Relay1030_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2002]
+ParameterName=Reg104 - 107 / Relay1040 - 107F
+ObjectType=0x8
+SubNumber=5
+
+[2002sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2002sub1]
+ParameterName=Reg104 / Relay1040_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2002sub2]
+ParameterName=Reg105 / Relay1050_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2002sub3]
+ParameterName=Reg106 / Relay1060_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2002sub4]
+ParameterName=Reg107 / Relay1070_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2003]
+ParameterName=Reg108 - 10B / Relay1080 - 10BF
+ObjectType=0x8
+SubNumber=5
+
+[2003sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2003sub1]
+ParameterName=Reg108 / Relay1080_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2003sub2]
+ParameterName=Reg109 / Relay1090_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2003sub3]
+ParameterName=Reg10A / Relay10A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2003sub4]
+ParameterName=Reg10B / Relay10B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2004]
+ParameterName=Reg10C - 10F / Relay10C0 - 10FF
+ObjectType=0x8
+SubNumber=5
+
+[2004sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2004sub1]
+ParameterName=Reg10C / Relay10C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2004sub2]
+ParameterName=Reg10D / Relay10D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2004sub3]
+ParameterName=Reg10E / Relay10E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2004sub4]
+ParameterName=Reg10F / Relay10F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2005]
+ParameterName=Reg110 - 113 / Relay1100 - 113F
+ObjectType=0x8
+SubNumber=5
+
+[2005sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2005sub1]
+ParameterName=Reg110 / Relay1100_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2005sub2]
+ParameterName=Reg111 / Relay1110_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2005sub3]
+ParameterName=Reg112 / Relay1120_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2005sub4]
+ParameterName=Reg113 / Relay1130_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2006]
+ParameterName=Reg114 - 117 / Relay1140 - 117F
+ObjectType=0x8
+SubNumber=5
+
+[2006sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2006sub1]
+ParameterName=Reg114 / Relay1140_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2006sub2]
+ParameterName=Reg115 / Relay1150_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2006sub3]
+ParameterName=Reg116 / Relay1160_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2006sub4]
+ParameterName=Reg117 / Relay1170_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2007]
+ParameterName=Reg118 - 11B / Relay1180 - 11BF
+ObjectType=0x8
+SubNumber=5
+
+[2007sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2007sub1]
+ParameterName=Reg118 / Relay1180_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2007sub2]
+ParameterName=Reg119 / Relay1190_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2007sub3]
+ParameterName=Reg11A / Relay11A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2007sub4]
+ParameterName=Reg11B / Relay11B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2008]
+ParameterName=Reg11C - 11F / Relay11C0 - 11FF
+ObjectType=0x8
+SubNumber=5
+
+[2008sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2008sub1]
+ParameterName=Reg11C / Relay11C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2008sub2]
+ParameterName=Reg11D / Relay11D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2008sub3]
+ParameterName=Reg11E / Relay11E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2008sub4]
+ParameterName=Reg11F / Relay11F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2009]
+ParameterName=Reg120 - 123 / Relay1200 - 123F
+ObjectType=0x8
+SubNumber=5
+
+[2009sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2009sub1]
+ParameterName=Reg120 / Relay1200_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2009sub2]
+ParameterName=Reg121 / Relay1210_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2009sub3]
+ParameterName=Reg122 / Relay1220_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2009sub4]
+ParameterName=Reg123 / Relay1230_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200A]
+ParameterName=Reg124 - 127 / Relay1240 - 127F
+ObjectType=0x8
+SubNumber=5
+
+[200Asub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Asub1]
+ParameterName=Reg124 / Relay1240_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Asub2]
+ParameterName=Reg125 / Relay1250_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Asub3]
+ParameterName=Reg126 / Relay1260_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Asub4]
+ParameterName=Reg127 / Relay1270_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200B]
+ParameterName=Reg128 - 12B / Relay1280 - 12BF
+ObjectType=0x8
+SubNumber=5
+
+[200Bsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Bsub1]
+ParameterName=Reg128 / Relay1280_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Bsub2]
+ParameterName=Reg129 / Relay1290_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Bsub3]
+ParameterName=Reg12A / Relay12A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Bsub4]
+ParameterName=Reg12B / Relay12B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200C]
+ParameterName=Reg12C - 12F / Relay12C0 - 12FF
+ObjectType=0x8
+SubNumber=5
+
+[200Csub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Csub1]
+ParameterName=Reg12C / Relay12C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Csub2]
+ParameterName=Reg12D / Relay12D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Csub3]
+ParameterName=Reg12E / Relay12E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Csub4]
+ParameterName=Reg12F / Relay12F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200D]
+ParameterName=Reg130 - 133 / Relay1300 - 133F
+ObjectType=0x8
+SubNumber=5
+
+[200Dsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Dsub1]
+ParameterName=Reg130 / Relay1300_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Dsub2]
+ParameterName=Reg131 / Relay1310_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Dsub3]
+ParameterName=Reg132 / Relay1320_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Dsub4]
+ParameterName=Reg133 / Relay1330_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200E]
+ParameterName=Reg134 - 137 / Relay1340 - 137F
+ObjectType=0x8
+SubNumber=5
+
+[200Esub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Esub1]
+ParameterName=Reg134 / Relay1340_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Esub2]
+ParameterName=Reg135 / Relay1350_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Esub3]
+ParameterName=Reg136 / Relay1360_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Esub4]
+ParameterName=Reg137 / Relay1370_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200F]
+ParameterName=Reg138 - 13B / Relay1380 - 13BF
+ObjectType=0x8
+SubNumber=5
+
+[200Fsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[200Fsub1]
+ParameterName=Reg138 / Relay1380_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Fsub2]
+ParameterName=Reg139 / Relay1390_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Fsub3]
+ParameterName=Reg13A / Relay13A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[200Fsub4]
+ParameterName=Reg13B / Relay13B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2010]
+ParameterName=Reg13C - 13F / Relay13C0 - 13FF
+ObjectType=0x8
+SubNumber=5
+
+[2010sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2010sub1]
+ParameterName=Reg13C / Relay13C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2010sub2]
+ParameterName=Reg13D / Relay13D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2010sub3]
+ParameterName=Reg13E / Relay13E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2010sub4]
+ParameterName=Reg13F / Relay13F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2011]
+ParameterName=Reg140 - 143 / Relay1400 - 143F
+ObjectType=0x8
+SubNumber=5
+
+[2011sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2011sub1]
+ParameterName=Reg140 / Relay1400_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2011sub2]
+ParameterName=Reg141 / Relay1410_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2011sub3]
+ParameterName=Reg142 / Relay1420_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2011sub4]
+ParameterName=Reg143 / Relay1430_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2012]
+ParameterName=Reg144 - 147 / Relay1440 - 147F
+ObjectType=0x8
+SubNumber=5
+
+[2012sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2012sub1]
+ParameterName=Reg144 / Relay1440_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2012sub2]
+ParameterName=Reg145 / Relay1450_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2012sub3]
+ParameterName=Reg146 / Relay1460_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2012sub4]
+ParameterName=Reg147 / Relay1470_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2013]
+ParameterName=Reg148 - 14B / Relay1480 - 14BF
+ObjectType=0x8
+SubNumber=5
+
+[2013sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2013sub1]
+ParameterName=Reg148 / Relay1480_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2013sub2]
+ParameterName=Reg149 / Relay1490_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2013sub3]
+ParameterName=Reg14A / Relay14A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2013sub4]
+ParameterName=Reg14B / Relay14B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2014]
+ParameterName=Reg14C - 14F / Relay14C0 - 14FF
+ObjectType=0x8
+SubNumber=5
+
+[2014sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2014sub1]
+ParameterName=Reg14C / Relay14C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2014sub2]
+ParameterName=Reg14D / Relay14D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2014sub3]
+ParameterName=Reg14E / Relay14E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2014sub4]
+ParameterName=Reg14F / Relay14F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2015]
+ParameterName=Reg150 - 153 / Relay1500 - 153F
+ObjectType=0x8
+SubNumber=5
+
+[2015sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2015sub1]
+ParameterName=Reg150 / Relay1500_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2015sub2]
+ParameterName=Reg151 / Relay1510_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2015sub3]
+ParameterName=Reg152 / Relay1520_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2015sub4]
+ParameterName=Reg153 / Relay1530_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2016]
+ParameterName=Reg154 - 157 / Relay1540 - 157F
+ObjectType=0x8
+SubNumber=5
+
+[2016sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2016sub1]
+ParameterName=Reg154 / Relay1540_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2016sub2]
+ParameterName=Reg155 / Relay1550_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2016sub3]
+ParameterName=Reg156 / Relay1560_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2016sub4]
+ParameterName=Reg157 / Relay1570_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2017]
+ParameterName=Reg158 - 15B / Relay1580 - 15BF
+ObjectType=0x8
+SubNumber=5
+
+[2017sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2017sub1]
+ParameterName=Reg158 / Relay1580_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2017sub2]
+ParameterName=Reg159 / Relay1590_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2017sub3]
+ParameterName=Reg15A / Relay15A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2017sub4]
+ParameterName=Reg15B / Relay15B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2018]
+ParameterName=Reg15C - 15F / Relay15C0 - 15FF
+ObjectType=0x8
+SubNumber=5
+
+[2018sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2018sub1]
+ParameterName=Reg15C / Relay15C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2018sub2]
+ParameterName=Reg15D / Relay15D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2018sub3]
+ParameterName=Reg15E / Relay15E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2018sub4]
+ParameterName=Reg15F / Relay15F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2019]
+ParameterName=Reg160 - 163 / Relay1600 - 163F
+ObjectType=0x8
+SubNumber=5
+
+[2019sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2019sub1]
+ParameterName=Reg160 / Relay1600_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2019sub2]
+ParameterName=Reg161 / Relay1610_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2019sub3]
+ParameterName=Reg162 / Relay1620_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2019sub4]
+ParameterName=Reg163 / Relay1630_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201A]
+ParameterName=Reg164 - 167 / Relay1640 - 167F
+ObjectType=0x8
+SubNumber=5
+
+[201Asub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Asub1]
+ParameterName=Reg164 / Relay1640_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Asub2]
+ParameterName=Reg165 / Relay1650_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Asub3]
+ParameterName=Reg166 / Relay1660_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Asub4]
+ParameterName=Reg167 / Relay1670_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201B]
+ParameterName=Reg168 - 16B / Relay1680 - 16BF
+ObjectType=0x8
+SubNumber=5
+
+[201Bsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Bsub1]
+ParameterName=Reg168 / Relay1680_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Bsub2]
+ParameterName=Reg169 / Relay1690_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Bsub3]
+ParameterName=Reg16A / Relay16A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Bsub4]
+ParameterName=Reg16B / Relay16B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201C]
+ParameterName=Reg16C - 16F / Relay16C0 - 16FF
+ObjectType=0x8
+SubNumber=5
+
+[201Csub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Csub1]
+ParameterName=Reg16C / Relay16C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Csub2]
+ParameterName=Reg16D / Relay16D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Csub3]
+ParameterName=Reg16E / Relay16E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Csub4]
+ParameterName=Reg16F / Relay16F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201D]
+ParameterName=Reg170 - 173 / Relay1700 - 173F
+ObjectType=0x8
+SubNumber=5
+
+[201Dsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Dsub1]
+ParameterName=Reg170 / Relay1700_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Dsub2]
+ParameterName=Reg171 / Relay1710_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Dsub3]
+ParameterName=Reg172 / Relay1720_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Dsub4]
+ParameterName=Reg173 / Relay1730_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201E]
+ParameterName=Reg174 - 177 / Relay1740 - 177F
+ObjectType=0x8
+SubNumber=5
+
+[201Esub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Esub1]
+ParameterName=Reg174 / Relay1740_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Esub2]
+ParameterName=Reg175 / Relay1750_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Esub3]
+ParameterName=Reg176 / Relay1760_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Esub4]
+ParameterName=Reg177 / Relay1770_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201F]
+ParameterName=Reg178 - 17B / Relay1780 - 17BF
+ObjectType=0x8
+SubNumber=5
+
+[201Fsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[201Fsub1]
+ParameterName=Reg178 / Relay1780_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Fsub2]
+ParameterName=Reg179 / Relay1790_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Fsub3]
+ParameterName=Reg17A / Relay17A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[201Fsub4]
+ParameterName=Reg17B / Relay17B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2020]
+ParameterName=Reg17C - 17F / Relay17C0 - 17FF
+ObjectType=0x8
+SubNumber=5
+
+[2020sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2020sub1]
+ParameterName=Reg17C / Relay17C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2020sub2]
+ParameterName=Reg17D / Relay17D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2020sub3]
+ParameterName=Reg17E / Relay17E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2020sub4]
+ParameterName=Reg17F / Relay17F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=rww
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2021]
+ParameterName=Reg180 - 183 / Relay1800 - 183F
+ObjectType=0x8
+SubNumber=5
+
+[2021sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2021sub1]
+ParameterName=Reg180 / Relay1800_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2021sub2]
+ParameterName=Reg181 / Relay1810_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2021sub3]
+ParameterName=Reg182 / Relay1820_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2021sub4]
+ParameterName=Reg183 / Relay1830_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2022]
+ParameterName=Reg184 - 187 / Relay1840 - 187F
+ObjectType=0x8
+SubNumber=5
+
+[2022sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2022sub1]
+ParameterName=Reg184 / Relay1840_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2022sub2]
+ParameterName=Reg185 / Relay1850_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2022sub3]
+ParameterName=Reg186 / Relay1860_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2022sub4]
+ParameterName=Reg187 / Relay1870_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2023]
+ParameterName=Reg188 - 18B / Relay1880 - 18BF
+ObjectType=0x8
+SubNumber=5
+
+[2023sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2023sub1]
+ParameterName=Reg188 / Relay1880_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2023sub2]
+ParameterName=Reg189 / Relay1890_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2023sub3]
+ParameterName=Reg18A / Relay18A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2023sub4]
+ParameterName=Reg18B / Relay18B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2024]
+ParameterName=Reg18C - 18F / Relay18C0 - 18FF
+ObjectType=0x8
+SubNumber=5
+
+[2024sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2024sub1]
+ParameterName=Reg18C / Relay18C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2024sub2]
+ParameterName=Reg18D / Relay18D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2024sub3]
+ParameterName=Reg18E / Relay18E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2024sub4]
+ParameterName=Reg18F / Relay18F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2025]
+ParameterName=Reg190 - 193 / Relay1900 - 193F
+ObjectType=0x8
+SubNumber=5
+
+[2025sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2025sub1]
+ParameterName=Reg190 / Relay1900_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2025sub2]
+ParameterName=Reg191 / Relay1910_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2025sub3]
+ParameterName=Reg192 / Relay1920_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2025sub4]
+ParameterName=Reg193 / Relay1930_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2026]
+ParameterName=Reg194 - 197 / Relay1940 - 197F
+ObjectType=0x8
+SubNumber=5
+
+[2026sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2026sub1]
+ParameterName=Reg194 / Relay1940_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2026sub2]
+ParameterName=Reg195 / Relay1950_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2026sub3]
+ParameterName=Reg196 / Relay1960_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2026sub4]
+ParameterName=Reg197 / Relay1970_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2027]
+ParameterName=Reg198 - 19B / Relay19B0 - 19BF
+ObjectType=0x8
+SubNumber=5
+
+[2027sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2027sub1]
+ParameterName=Reg198 / Relay1980_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2027sub2]
+ParameterName=Reg199 / Relay1990_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2027sub3]
+ParameterName=Reg19A / Relay19A0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2027sub4]
+ParameterName=Reg19B / Relay19B0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2028]
+ParameterName=Reg19C - 19F / Relay19C0 - 19FF
+ObjectType=0x8
+SubNumber=5
+
+[2028sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2028sub1]
+ParameterName=Reg19C / Relay19C0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2028sub2]
+ParameterName=Reg19D / Relay19D0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2028sub3]
+ParameterName=Reg19E / Relay19E0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2028sub4]
+ParameterName=Reg19F / Relay19F0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2029]
+ParameterName=Reg1A0 - 1A3 / Relay1A00 - 1A3F
+ObjectType=0x8
+SubNumber=5
+
+[2029sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2029sub1]
+ParameterName=Reg1A0 / Relay1A00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2029sub2]
+ParameterName=Reg1A1 / Relay1A10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2029sub3]
+ParameterName=Reg1A2 / Relay1A20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2029sub4]
+ParameterName=Reg1A3 / Relay1A30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202A]
+ParameterName=Reg1A4 - 1A7 / Relay1A40 - 1A7F
+ObjectType=0x8
+SubNumber=5
+
+[202Asub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Asub1]
+ParameterName=Reg1A4 / Relay1A40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Asub2]
+ParameterName=Reg1A5 / Relay1A50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Asub3]
+ParameterName=Reg1A6 / Relay1A60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Asub4]
+ParameterName=Reg1A7 / Relay1A70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202B]
+ParameterName=Reg1A8 - 1AB / Relay1A80 - 1ABF
+ObjectType=0x8
+SubNumber=5
+
+[202Bsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Bsub1]
+ParameterName=Reg1A8 / Relay1A80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Bsub2]
+ParameterName=Reg1A9 / Relay1A90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Bsub3]
+ParameterName=Reg1AA / Relay1AA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Bsub4]
+ParameterName=Reg1AB / Relay1AB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202C]
+ParameterName=Reg1AC - 1AF / Relay1AC0 - 1AFF
+ObjectType=0x8
+SubNumber=5
+
+[202Csub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Csub1]
+ParameterName=Reg1AC / Relay1AC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Csub2]
+ParameterName=Reg1AD / Relay1AD0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Csub3]
+ParameterName=Reg1AE / Relay1AE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Csub4]
+ParameterName=Reg1AF / Relay1AF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202D]
+ParameterName=Reg1B0 - 1B3 / Relay1B00 - 1B3F
+ObjectType=0x8
+SubNumber=5
+
+[202Dsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Dsub1]
+ParameterName=Reg1B0 / Relay1B00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Dsub2]
+ParameterName=Reg1B1 / Relay1B10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Dsub3]
+ParameterName=Reg1B2 / Relay1B20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Dsub4]
+ParameterName=Reg1B3 / Relay1B30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202E]
+ParameterName=Reg1B4 - 1B7 / Relay1B40 - 1B7F
+ObjectType=0x8
+SubNumber=5
+
+[202Esub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Esub1]
+ParameterName=Reg1B4 / Relay1B40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Esub2]
+ParameterName=Reg1B5 / Relay1B50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Esub3]
+ParameterName=Reg1B6 / Relay1B60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Esub4]
+ParameterName=Reg1B7 / Relay1B70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202F]
+ParameterName=Reg1B8 - 1BB / Relay1B80 - 1BBF
+ObjectType=0x8
+SubNumber=5
+
+[202Fsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[202Fsub1]
+ParameterName=Reg1B8 / Relay1B80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Fsub2]
+ParameterName=Reg1B9 / Relay1B90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Fsub3]
+ParameterName=Reg1BA / Relay1BA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[202Fsub4]
+ParameterName=Reg1BB / Relay1BB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2030]
+ParameterName=Reg1BC - 1BF / Relay1BC0 - 1BFF
+ObjectType=0x8
+SubNumber=5
+
+[2030sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2030sub1]
+ParameterName=Reg1BC / Relay1BC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2030sub2]
+ParameterName=Reg1BD / Relay1BD0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2030sub3]
+ParameterName=Reg1BE / Relay1BE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2030sub4]
+ParameterName=Reg1BF / Relay1BF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2031]
+ParameterName=Reg1C0 - 1C3 / Relay1C00 - 1C3F
+ObjectType=0x8
+SubNumber=5
+
+[2031sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2031sub1]
+ParameterName=Reg1C0 / Relay1C00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2031sub2]
+ParameterName=Reg1C1 / Relay1C10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2031sub3]
+ParameterName=Reg1C2 / Relay1C20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2031sub4]
+ParameterName=Reg1C3 / Relay1C30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2032]
+ParameterName=Reg1C4 - 1C7 / Relay1C40 - 1C7F
+ObjectType=0x8
+SubNumber=5
+
+[2032sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2032sub1]
+ParameterName=Reg1C4 / Relay1C40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2032sub2]
+ParameterName=Reg1C5 / Relay1C50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2032sub3]
+ParameterName=Reg1C6 / Relay1C60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2032sub4]
+ParameterName=Reg1C7 / Relay1C70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2033]
+ParameterName=Reg1C8 - 1CB / Relay1C80 - 1CFF
+ObjectType=0x8
+SubNumber=5
+
+[2033sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2033sub1]
+ParameterName=Reg1C8 / Relay1C80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2033sub2]
+ParameterName=Reg1C9 / Relay1C90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2033sub3]
+ParameterName=Reg1CA / Relay1CA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2033sub4]
+ParameterName=Reg1CB / Relay1CB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2034]
+ParameterName=Reg1CC - 1CF / Relay1CC0 - 1CFF
+ObjectType=0x8
+SubNumber=5
+
+[2034sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2034sub1]
+ParameterName=Reg1CC / Relay1CC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2034sub2]
+ParameterName=Reg1CD / Relay1CD0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2034sub3]
+ParameterName=Reg1CE / Relay1CE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2034sub4]
+ParameterName=Reg1CF / Relay1CF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2035]
+ParameterName=Reg1D0 - 1D3 / Relay1D00 - 1D3F
+ObjectType=0x8
+SubNumber=5
+
+[2035sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2035sub1]
+ParameterName=Reg1D0 / Relay1D00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2035sub2]
+ParameterName=Reg1D1 / Relay1D10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2035sub3]
+ParameterName=Reg1D2 / Relay1D20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2035sub4]
+ParameterName=Reg1D3 / Relay1D30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2036]
+ParameterName=Reg1D4 - 1D7 / Relay1D40 - 1D7F
+ObjectType=0x8
+SubNumber=5
+
+[2036sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2036sub1]
+ParameterName=Reg1D4 / Relay1D40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2036sub2]
+ParameterName=Reg1D5 / Relay1D50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2036sub3]
+ParameterName=Reg1D6 / Relay1D60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2036sub4]
+ParameterName=Reg1D7 / Relay1D70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2037]
+ParameterName=Reg1D8 - 1DB / Relay1D80 - 1DBF
+ObjectType=0x8
+SubNumber=5
+
+[2037sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2037sub1]
+ParameterName=Reg1D8 / Relay1D80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2037sub2]
+ParameterName=Reg1D9 / Relay1D90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2037sub3]
+ParameterName=Reg1DA / Relay1DA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2037sub4]
+ParameterName=Reg1DB / Relay1DB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2038]
+ParameterName=Reg1DC - 1DF / Relay1DC0 - 1DFF
+ObjectType=0x8
+SubNumber=5
+
+[2038sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2038sub1]
+ParameterName=Reg1DC / Relay1DC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2038sub2]
+ParameterName=Reg1DD / Relay1DD0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2038sub3]
+ParameterName=Reg1DE / Relay1DE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2038sub4]
+ParameterName=Reg1DF / Relay1DF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2039]
+ParameterName=Reg1E0 - 1E3 / Relay1E00 - 1E3F
+ObjectType=0x8
+SubNumber=5
+
+[2039sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2039sub1]
+ParameterName=Reg1E0 / Relay1E00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2039sub2]
+ParameterName=Reg1E1 / Relay1E10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2039sub3]
+ParameterName=Reg1E2 / Relay1E20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2039sub4]
+ParameterName=Reg1E3 / Relay1E30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203A]
+ParameterName=Reg1E4 - 1E7 / Relay1E40 - 1E7F
+ObjectType=0x8
+SubNumber=5
+
+[203Asub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Asub1]
+ParameterName=Reg1E4 / Relay1E40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Asub2]
+ParameterName=Reg1E5 / Relay1E50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Asub3]
+ParameterName=Reg1E6 / Relay1E60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Asub4]
+ParameterName=Reg1E7 / Relay1E70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203B]
+ParameterName=Reg1E8 - 1EB / Relay1E80 - 1EBF
+ObjectType=0x8
+SubNumber=5
+
+[203Bsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Bsub1]
+ParameterName=Reg1E8 / Relay1E80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Bsub2]
+ParameterName=Reg1E9 / Relay1E90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Bsub3]
+ParameterName=Reg1EA / Relay1EA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Bsub4]
+ParameterName=Reg1EB / Relay1EB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203C]
+ParameterName=Reg1EC - 1EF / Relay1EC0 - 1ECF
+ObjectType=0x8
+SubNumber=5
+
+[203Csub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Csub1]
+ParameterName=Reg1EC / Relay1EC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Csub2]
+ParameterName=Reg1ED / Relay1ED0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Csub3]
+ParameterName=Reg1EE / Relay1EE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Csub4]
+ParameterName=Reg1EF / Relay1EF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203D]
+ParameterName=Reg1F0 - 1F3 / Relay1F00 - 1F3F
+ObjectType=0x8
+SubNumber=5
+
+[203Dsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Dsub1]
+ParameterName=Reg1F0 / Relay1F00_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Dsub2]
+ParameterName=Reg1F1 / Relay1F10_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Dsub3]
+ParameterName=Reg1F2 / Relay1F20_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Dsub4]
+ParameterName=Reg1F3 / Relay1F30_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203E]
+ParameterName=Reg1F4 - 1F7 / Relay1F40 - 1F7F
+ObjectType=0x8
+SubNumber=5
+
+[203Esub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Esub1]
+ParameterName=Reg1F4 / Relay1F40_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Esub2]
+ParameterName=Reg1F5 / Relay1F50_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Esub3]
+ParameterName=Reg1F6 / Relay1F60_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Esub4]
+ParameterName=Reg1F7 / Relay1F70_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203F]
+ParameterName=Reg1F8 - 1FB / Relay1F80 - 1FBF
+ObjectType=0x8
+SubNumber=5
+
+[203Fsub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[203Fsub1]
+ParameterName=Reg1F8 / Relay1F80_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Fsub2]
+ParameterName=Reg1F9 / Relay1F90_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Fsub3]
+ParameterName=Reg1FA / Relay1FA0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[203Fsub4]
+ParameterName=Reg1FB / Relay1FB0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2040]
+ParameterName=Reg1FC - 1FF / Relay1FC0 - 1FFF
+ObjectType=0x8
+SubNumber=5
+
+[2040sub0]
+ParameterName=Number Of Entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=4
+HighLimit=4
+
+[2040sub1]
+ParameterName=Reg1FC / Relay1FC0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2040sub2]
+ParameterName=Reg1FD / Relay1FD0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2040sub3]
+ParameterName=Reg1FE / Relay1FE0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+[2040sub4]
+ParameterName=Reg1FF / Relay1FF0_F
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+DefaultValue=0x0000
+PDOMapping=1
+LowLimit=0x0000
+HighLimit=0xFFFF
+
+
+;------------------------------------------------------------------------------
+; Start of Dummy Entries
+;------------------------------------------------------------------------------
+
+[Tools]
+Items=0
+;------------------------------------------------------------------------------
+; End of EDS file
+;------------------------------------------------------------------------------

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.3.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x010C" DeviceID="0x0009">
+			<InfoText TextId="T_ID_DEV_DESCRIPTION" />
+			<VendorName Value="HMS Industrial Networks" />
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="General" ProductFamily="Anybus CompactCom PRT 2-Port" />
+		</DeviceFunction>
+		<ApplicationProcess>
+
+<!-- ============================================================================================ -->
+<!--   List of Device Access Points (DAP)                                                         -->
+<!-- ============================================================================================ -->
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DAP V1.0" PhysicalSlots="0..64" ModuleIdentNumber="0x00000011" MinDeviceInterval="64" ImplementationType="NP30" DNS_CompatibleName="ABCC-PRT-2-Port" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V1.0">
+					<ModuleInfo CategoryRef="CAT_REF_MIGRATION_DAP">
+						<Name TextId="T_ID_DAP_V1" />
+						<InfoText TextId="T_ID_V1_DEV_DESCRIPTION" />
+						<VendorName Value="HMS Industrial Networks" />
+						<OrderNumber Value="ABCC-PRT (2-Port)" />
+						<HardwareRelease Value="2" />
+						<SoftwareRelease Value="V2.7" />
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="324" MaxOutputLength="324" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_MODULE" AllowedInSlots="1" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP V1.0" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1" />
+							<ModuleInfo>
+								<Name TextId="T_ID_DAP_V1" />
+								<InfoText TextId="T_ID_V1_DEV_DESCRIPTION" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1" />
+					</Graphics>
+				</DeviceAccessPointItem>
+
+				<DeviceAccessPointItem ID="DAP V1.5" PhysicalSlots="0..64" ModuleIdentNumber="0x00000011" MinDeviceInterval="64" ImplementationType="NP30" DNS_CompatibleName="ABCC-PRT-2-Port" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" PNIO_Version="V1.5">
+					<ModuleInfo CategoryRef="CAT_REF_MIGRATION_DAP">
+						<Name TextId="T_ID_DAP_V15" />
+						<InfoText TextId="T_ID_V15_DEV_DESCRIPTION" />
+						<VendorName Value="HMS Industrial Networks" />
+						<OrderNumber Value="ABCC-PRT (2-Port)" />
+						<HardwareRelease Value="2" />
+						<SoftwareRelease Value="V2.7" />
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="324" MaxOutputLength="324" />
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_MODULE" AllowedInSlots="1" />
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP V1.5" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1" />
+							<ModuleInfo>
+								<Name TextId="T_ID_DAP_V15" />
+								<InfoText TextId="T_ID_V15_DEV_DESCRIPTION" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1" />
+					</Graphics>
+				</DeviceAccessPointItem>
+
+				<DeviceAccessPointItem ID="DAP V2.0" PhysicalSlots="0..64" ModuleIdentNumber="0x00000011" MinDeviceInterval="64" ImplementationType="NP30" DNS_CompatibleName="ABCC-PRT-2-Port" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" DeviceAccessSupported="true" NameOfStationNotTransferable="true" RequiredSchemaVersion="V2.25" ParameterizationSpeedupSupported="true" PowerOnToCommReady="1500" PNIO_Version="V2.2">
+					<ModuleInfo>
+						<Name TextId="T_ID_DAP_V2" />
+						<InfoText TextId="T_ID_V2_DEV_DESCRIPTION" />
+						<VendorName Value="HMS Industrial Networks" />
+						<OrderNumber Value="ABCC-PRT (2-Port)" />
+						<HardwareRelease Value="2" />
+						<SoftwareRelease Value="V2.7" />
+					</ModuleInfo>
+
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="T_ID_SS_INTERFACE" />
+						<SubslotItem SubslotNumber="32769" TextId="T_ID_SS_PORT1" />
+						<SubslotItem SubslotNumber="32770" TextId="T_ID_SS_PORT2" />
+					</SubslotList>
+
+					<IOConfigData MaxInputLength="324" MaxOutputLength="324" />
+
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="ID_MODULE" AllowedInSlots="1" />
+					</UseableModules>
+
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DAP V2.0" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+							<IOData IOPS_Length="1" IOCS_Length="1" />
+							<ModuleInfo>
+								<Name TextId="T_ID_DAP_V2" />
+								<InfoText TextId="T_ID_V2_DEV_DESCRIPTION" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="Interface" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" TextId="T_ID_DAP_INTERFACE_MODULE" DCP_HelloSupported="true" IsochroneModeSupported="false" SupportedMibs="MIB2" SupportedProtocols="SNMP;LLDP">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0" PullModuleAlarmSupported="false">
+								<TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512" />
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="Port 1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUTypes="16" TextId="T_ID_PORT" />
+						<PortSubmoduleItem ID="Port 2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" MAUTypes="16" TextId="T_ID_PORT2" />
+					</SystemDefinedSubmoduleList>
+
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1" />
+					</Graphics>
+				</DeviceAccessPointItem>
+
+			</DeviceAccessPointList>
+
+<!-- List of modules -->
+
+			<ModuleList>
+
+				<!-- Output 127 word  Input 127 Word-->
+
+				<ModuleItem ID="ID_MODULE" ModuleIdentNumber="0x00000020">
+					<ModuleInfo CategoryRef="CAT_REF_MODULES">
+						<Name TextId="T_ID_MODULE_NAME" />
+						<InfoText TextId="T_ID_INFO_TEXT" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="ID_SUBMOD_OUTPUT" SubmoduleIdentNumber="0x00000001" API="0" FixedInSubslots="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Output Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="false" Length="254" TextId="T_ID_OUTPUT" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="T_ID_SUBMOD_NAME_OUTPUT" />
+								<InfoText TextId="T_ID_SUBMOD_INFO_OUTPUT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+						<VirtualSubmoduleItem ID="ID_SUBMOD_INPUT" SubmoduleIdentNumber="0x00000002" API="0" FixedInSubslots="2">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="OctetString" UseAsBits="false" Length="254" TextId="T_ID_INPUT" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="T_ID_SUBMOD_NAME_INPUT" />
+								<InfoText TextId="T_ID_SUBMOD_INFO_INPUT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+
+<!--
+				<ModuleItem ID="ID_MODULE" ModuleIdentNumber="0x00000020">
+					<ModuleInfo CategoryRef="CAT_REF_MODULES">
+						<Name TextId="T_ID_MODULE_NAME" />
+						<InfoText TextId="T_ID_INFO_TEXT" />
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+-->
+						<!-- Output word*2 -->
+<!--
+						<VirtualSubmoduleItem ID="ID_SUBMOD_OUTPUT" SubmoduleIdentNumber="0x00000001" API="0" FixedInSubslots="1">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Output Consistency="All items consistency">
+-->
+							<!--	<DataItem DataType="OctetString" UseAsBits="false" Length="4" TextId="T_ID_OUTPUT" />	-->
+<!--
+									<DataItem DataType="Unsigned16" TextId="T_ID_OUTPUT" />
+									<DataItem DataType="Unsigned16" TextId="T_ID_OUTPUT" />
+								</Output>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="T_ID_SUBMOD_NAME_OUTPUT" />
+								<InfoText TextId="T_ID_SUBMOD_INFO_OUTPUT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+-->
+						<!-- Input word*2-->
+<!--
+						<VirtualSubmoduleItem ID="ID_SUBMOD_INPUT" SubmoduleIdentNumber="0x00000002" API="0" FixedInSubslots="2">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+-->
+							<!--	<DataItem DataType="OctetString" UseAsBits="false" Length="4" TextId="T_ID_INPUT" />	-->
+<!--
+									<DataItem DataType="Unsigned16" TextId="T_ID_INPUT" />
+									<DataItem DataType="Unsigned16" TextId="T_ID_INPUT" />
+								</Input>
+							</IOData>
+							<ModuleInfo>
+								<Name TextId="T_ID_SUBMOD_NAME_INPUT" />
+								<InfoText TextId="T_ID_SUBMOD_INFO_INPUT" />
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+-->
+			</ModuleList>
+
+<!-- List of values -->
+
+<!-- List of graphics -->
+			<GraphicsList>
+				<GraphicItem ID="1" GraphicFile="GSDML-010C-0009-ABCC-PRT2P" />
+			</GraphicsList>
+<!-- List of categories -->
+			<CategoryList>
+				<CategoryItem ID="CAT_REF_MODULES" TextId="T_ID_CAT_REF_MODULES" />
+				<CategoryItem ID="CAT_REF_MIGRATION_DAP" TextId="T_ID_MIGRATION_DAP" />
+			</CategoryList>
+
+<!-- List of texts -->
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<!--Device Access Point information etc -->
+					<Text TextId="T_ID_DEV_DESCRIPTION" Value="Anybus CompactCom PROFINET IO 2-Port" />
+					<Text TextId="T_ID_V1_DEV_DESCRIPTION" Value="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics. RT communication is supported" />
+					<Text TextId="T_ID_V15_DEV_DESCRIPTION" Value="This Device Access Point may be used by IO Controllers that do not support extended PROFINET diagnostics. RT communication is supported" />
+					<Text TextId="T_ID_V2_DEV_DESCRIPTION" Value="This Device Access Point supports RT communication" />
+					<Text TextId="T_ID_DAP_V1" Value="RT" />
+					<Text TextId="T_ID_DAP_V15" Value="RT (FW&gt;=1.13)" />
+					<Text TextId="T_ID_DAP_V2" Value="RT" />
+					<Text TextId="T_ID_SS_INTERFACE" Value="X1" />
+					<Text TextId="T_ID_SS_PORT1" Value="P1" />
+					<Text TextId="T_ID_SS_PORT2" Value="P2" />
+					<Text TextId="T_ID_DAP_INTERFACE_MODULE" Value="Interface" />
+					<Text TextId="T_ID_PORT" Value="Port 1" />
+					<Text TextId="T_ID_PORT2" Value="Port 2" />
+
+					<!--Module category-->
+					<Text TextId="T_ID_CAT_REF_MODULES" Value="Input/Output" />
+					<Text TextId="T_ID_MIGRATION_DAP" Value="Migration" />
+
+					<!-- Vendor module texts -->
+					<Text TextId="T_ID_INPUT" Value="Input" />
+					<Text TextId="T_ID_OUTPUT" Value="Output" />
+
+					<Text TextId="T_ID_MODULE_NAME" Value="Output 127 word Input 127 word" />
+					<Text TextId="T_ID_INFO_TEXT" Value="Output 127 word Input 127 word" />
+
+					<Text TextId="T_ID_SUBMOD_NAME_OUTPUT" Value="Output 127 word" />
+					<Text TextId="T_ID_SUBMOD_INFO_OUTPUT" Value="Output 127 word" />
+					<Text TextId="T_ID_SUBMOD_NAME_INPUT" Value="Input 127 word" />
+					<Text TextId="T_ID_SUBMOD_INFO_INPUT" Value="Input 127 word" />
+
+				</PrimaryLanguage>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

@@ -1,0 +1,76 @@
+#HMS Anybus-CC Module file    (HMS-ABCC-CCL(Occupies 3 Stations))
+
+[File]
+  FileComment = Anybus-CC Module;
+  CreateDate = 2007/06/26;
+  CreateTime = 12:00:00;
+  ModDate = 2007/06/26;
+  ModTime = 12:00:00;
+  Version = 1.0;
+
+[Device]
+  VendName = HMS Industrial Networks;     #Vendor Name
+  VendID = 0x0212;                        #Vendor Code
+  StationType = 1;                        #Station Type (0:I/O 1:Remote Device 2:Intelligent Device)
+  RemDevType = 0x4E;                      #Remote Device Type (Anybus)
+  DevModel = HMS-ABCC-CCL;                #Model
+  DevVer = A;                             #Version Information
+  Senyuu = 3;                             #Number Of Occupied Stations
+  BmpFile = hms_anybus.bmp;               #Corresponds Bitmap File Name
+  ErrReg = RWrB;                          #For Error Indication
+  UpDownLoadF = 0;                        #Not Correspond To Load
+  MasterFlg = 0;                          #Impossible To Set In The Standby Master
+
+# Name,Bit Register No.,Turn Off Name,Turn On Name
+[IO_Info_RX]
+EntryNum = 4;
+  BEntry1 = Initial data processing request flag,  RX58, ,        Initial data processing request;
+  BEntry2 = Initial data setting complete flag,    RX59, ,        Initial data setting complete;
+  BEntry3 = Error status flag,                     RX5A, No error,Error;
+  BEntry4 = Remote READY,                          RX5B, ,        Ready;
+
+[IO_Info_RY]
+EntryNum = 3;
+  BEntry1 = Initial data processing complete flag, RY58,    ,        Initial data processing complete;
+  BEntry2 = Initial data setting request flag,     RY59,    ,        Initial data setting;
+  BEntry3 = Error reset request flag,              RY5A,    ,        Error reset;
+
+[IO_Info_RWw]
+Comment = HMS Anybus-CC Module(Occupies 3 stations);      #Comments
+EntryNum = 12;             #Number of Entries
+#
+#  [<Signal(Parameter) Name>   <RW number><Data Type><Section Name><Initial Value><Range><Unit><Handshake RY><Handshake RX><RWr><Interlock><RY of midterm><RX of midterm>
+#
+  WEntry1  = User write area word 0,      RWw0, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry2  = User write area word 1,      RWw1, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry3  = User write area word 2,      RWw2, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry4  = User write area word 3,      RWw3, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry5  = User write area word 4,      RWw4, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry6  = User write area word 5,      RWw5, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry7  = User write area word 6,      RWw6, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry8  = User write area word 7,      RWw7, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry9  = User write area word 8,      RWw8, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry10 = User write area word 9,      RWw9, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry11 = User write area word 10,     RWwA, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry12 = User write area word 11,     RWwB, 0, ,  0, ,  ,- ,- ,,,,;
+
+[IO_Info_RWr]
+Comment = HMS Anybus-CC Module(Occupies 3 stations);      #Comments
+EntryNum = 13;             #Number of Entries
+#
+#  [<Signal(Parameter) Name>   <RW number><Data Type><Section Name><Initial Value><Range><Unit><Handshake RY><Handshake RX><RWr><Interlock><RY of midterm><RX of midterm>
+#
+  WEntry1  = User read area word 0,       RWr0, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry2  = User read area word 1,       RWr1, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry3  = User read area word 2,       RWr2, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry4  = User read area word 3,       RWr3, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry5  = User read area word 4,       RWr4, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry6  = User read area word 5,       RWr5, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry7  = User read area word 6,       RWr6, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry8  = User read area word 7,       RWr7, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry9  = User read area word 8,       RWr8, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry10 = User read area word 9,       RWr9, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry11 = User read area word 10,      RWrA, 0, ,  0, ,  ,- ,- ,,,,;
+  WEntry12 = Error Code Severity,         RWrB, 4, ,  0, ,  , -, -,,,,;
+  WEntry13 = Error Code Event,            RWrB, 5, ,  0, ,  , -, -,,,,;
+#

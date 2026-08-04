@@ -1,0 +1,67 @@
+[File]
+        DescText = "Anybus CompactCom - DeviceNet slave/adapter module";
+        CreateDate = 09-08-2004;
+        CreateTime = 15:56:21;
+        ModDate = 07-27-2008;
+        ModTime = 10:25:44;
+        Revision = 2.3;
+
+
+[Device]
+        VendCode = 90;
+        VendName = "HMS Industrial Networks";
+        ProdType = 0;
+        ProdTypeStr = "Generic Device";
+        ProdCode = 98;
+        MajRev = 2;
+        MinRev = 1;
+        ProdName = "Anybus CompactCom DEV";
+
+
+[IO_Info]
+        Default = 0x0001;       $ Default IO Connection = Poll
+
+        PollInfo =
+                0x000F,         $ Compatible IO type mask = All connections
+                1,              $ Input1
+                1;              $ Output1
+
+        StrobeInfo =
+                0x000F,         $ Compatible IO type mask = All connections
+                1,              $ Input1
+                1;              $ Output1
+
+        COSInfo =
+                0x0007,         $ Compatible IO type mask = All connections
+                1,              $ Input1
+                1;              $ Output1
+
+        CyclicInfo =
+                0x000B,         $ Compatible IO type mask = All connections
+                1,              $ Input1
+                1;              $ Output1
+
+        Input1 =
+                1,                      $ 1 byte
+                0,                      $ All bits are significant
+                0x000F,                 $ Compatible IO type mask = All connections
+                "ABCC Produce",         $ Name
+                6,                      $ Path size
+                "20 04 24 64 30 03",    $ Assembly object, Inst 100, Attr 3
+                "Data produced by the Anybus-CC";
+
+        Output1 =
+                1,                      $ 1 byte
+                0,                      $ All bits are significant
+                0x000F,                 $ Compatible IO type mask = All connections
+                "ABCC Consume",         $ Name
+                6,                      $ Path size
+                "20 04 24 96 30 03",    $ Assembly object, Inst 150, Attr 3
+                "Data consumed by the Anybus-CC ";
+
+
+[ParamClass]
+        MaxInst = 0;                    $ Max Instances - total # configuration parameters
+        Descriptor = 0x0000;            $ Parameter Class Descriptor - No parameters
+        CfgAssembly = 0;                $ The config assembly is not supported.
+
