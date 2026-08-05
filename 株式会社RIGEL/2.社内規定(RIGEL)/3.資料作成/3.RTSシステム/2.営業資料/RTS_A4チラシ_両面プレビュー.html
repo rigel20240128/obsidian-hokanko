@@ -1,96 +1,156 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8"><title>RTS A4チラシ 両面プレビュー</title>
+<html lang="ja"><head><meta charset="UTF-8"><title>RTS A4チラシ 両面プレビュー(カタログルール適用版)</title>
 <style>
 body{background:#ddd;margin:0;padding:20px;font-family:"Noto Sans JP",sans-serif;}
 .row{display:flex;gap:20px;justify-content:center;align-items:flex-start;flex-wrap:wrap;}
 .col{display:flex;flex-direction:column;align-items:center;}
 .col>p{font-size:12px;color:#555;margin:0 0 6px;}
-.card{width:400px;aspect-ratio:210/297;background:#fff;border:1px solid #ccc;padding:18px 16px;box-sizing:border-box;display:flex;flex-direction:column;color:#333;font-size:12px;}
-/* 表面 */
-.hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;}
-.logo{width:70px;height:30px;background:#F4F5F7;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;color:#888;}
-.rts{text-align:right;}
-.rts b{font-size:14px;color:#026881;}
-.rts span{font-size:8px;color:#5F5E5A;display:block;}
-.catch{font-size:19px;font-weight:700;color:#026881;line-height:1.4;margin-bottom:3px;}
-.sub{font-size:11px;margin-bottom:12px;}
-.flow{background:#F4F5F7;border-radius:6px;padding:8px;margin-bottom:12px;font-size:8px;color:#5F5E5A;text-align:center;}
-.body1{display:flex;gap:12px;flex:1;}
-.feat{display:flex;flex-direction:column;gap:8px;flex:1;}
-.feat div b{display:block;font-size:9px;}
-.feat div span{font-size:8px;color:#5F5E5A;}
-.photo{width:130px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;}
-.photo img{width:100%;object-fit:contain;border-radius:4px;}
-.photo p{font-size:7px;color:#5F5E5A;margin:3px 0 0;text-align:center;}
-.foot1{margin-top:auto;border-top:1px solid #ddd;padding-top:8px;font-size:8px;color:#5F5E5A;display:flex;justify-content:space-between;}
-/* 裏面 */
-h2{font-size:11px;color:#026881;margin:0 0 6px;font-weight:700;}
-.lead{background:#F4F5F7;border-radius:6px;padding:8px 10px;font-size:9px;margin-bottom:10px;}
-table{width:100%;border-collapse:collapse;font-size:8px;margin-bottom:8px;}
-td{padding:3px 5px;border-bottom:1px solid #eee;}
-.plans td{text-align:center;background:#F4F5F7;font-weight:700;color:#026881;}
-.pricenote{font-size:7.5px;color:#5F5E5A;margin-bottom:10px;line-height:1.5;}
-.box{border-left:3px solid #E8622C;background:#FAECE7;padding:7px 9px;margin-bottom:8px;font-size:8px;color:#712B13;}
-.foot2{margin-top:auto;border-top:1px solid #ddd;padding-top:8px;font-size:8px;color:#5F5E5A;line-height:1.6;}
-.foot2 b{color:#333;font-size:9px;}
+.card{width:400px;aspect-ratio:210/297;box-sizing:border-box;display:flex;flex-direction:column;color:#333;font-size:10px;overflow:hidden;position:relative;}
+.pad{padding:0 16px;}
+/* 表紙(1枚目) */
+.p1{background:#fff;}
+.band{background:#026881;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;}
+.band .logo{font-size:8px;color:#fff;border:1px solid rgba(255,255,255,.6);border-radius:4px;padding:3px 7px;}
+.band .rts{text-align:right;color:#fff;}
+.band .rts .cat{font-size:7px;opacity:.85;}
+.band .rts .name{font-size:16px;font-weight:700;letter-spacing:1px;}
+.catch{font-size:15px;font-weight:700;color:#026881;line-height:1.3;margin:8px 16px 2px;}
+.hero{display:flex;align-items:center;justify-content:center;padding:2px 16px;}
+.hero img{max-width:60%;max-height:70px;object-fit:contain;filter:drop-shadow(3px 4px 6px rgba(0,0,0,.15));}
+.why{display:flex;gap:6px;margin:4px 16px 6px;}
+.whybox{flex:1;border-radius:6px;padding:6px 7px;font-size:6.8px;line-height:1.4;}
+.whybox.q{background:#FAECE7;color:#712B13;}
+.whybox.a{background:#E1F5EE;color:#085041;}
+.whybox b{display:block;font-size:7.3px;margin-bottom:2px;}
+.featgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;margin:0 16px 6px;}
+.featcard{display:flex;gap:5px;align-items:flex-start;}
+.featcard .mono{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700;flex-shrink:0;}
+.featcard span{font-size:6.6px;line-height:1.3;padding-top:1px;}
+.price{text-align:center;font-size:7.5px;color:#5F5E5A;border-top:1px solid #eee;margin:auto 16px 6px;padding-top:5px;}
+.bar{background:#026881;color:#fff;text-align:right;padding:5px 16px;font-size:11px;font-weight:700;letter-spacing:2px;}
+/* 裏面(2枚目) */
+.p2{background:#fff;}
+.p2top{background:#026881;padding:10px 16px;}
+.p2top .small{font-size:8px;color:#9CC5D2;}
+.p2top .big{font-size:19px;color:#fff;font-weight:700;}
+.statrow{display:flex;justify-content:space-around;padding:10px 10px 4px;}
+.stat{text-align:center;width:22%;}
+.stat .c{width:44px;height:44px;border-radius:50%;background:#026881;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 3px;}
+.stat .c b{font-size:11px;line-height:1;}
+.stat .c i{font-size:6px;font-style:normal;}
+.stat p{font-size:6.3px;color:#5F5E5A;margin:0;line-height:1.3;}
+h2{font-size:9.5px;color:#026881;margin:10px 0 5px;font-weight:700;border-left:3px solid #026881;padding-left:6px;}
+.steps{display:flex;justify-content:space-between;padding:0 2px;}
+.step{flex:1;text-align:center;font-size:6px;color:#5F5E5A;padding:0 2px;}
+.step .n{width:16px;height:16px;border-radius:50%;background:#026881;color:#fff;font-size:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 2px;}
+.currgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;}
+.currcard{border:1px solid #eee;border-radius:6px;padding:6px;}
+.currcard .top{display:flex;align-items:center;gap:5px;margin-bottom:3px;}
+.currcard .mono{width:16px;height:16px;border-radius:50%;background:#026881;color:#fff;font-size:7px;display:flex;align-items:center;justify-content:center;}
+.currcard .top b{font-size:8px;}
+.currcard ul{margin:0;padding-left:14px;font-size:6.3px;line-height:1.5;color:#5F5E5A;}
+table.plan{width:100%;border-collapse:collapse;font-size:7px;margin-bottom:4px;}
+table.plan th{background:#026881;color:#fff;padding:3px 5px;font-size:6.5px;text-align:left;}
+table.plan td{padding:3px 5px;border-bottom:1px solid #eee;}
+table.plan td:first-child{font-weight:700;color:#026881;white-space:nowrap;}
+.smallnote{font-size:6.2px;color:#999;line-height:1.5;margin-bottom:6px;font-style:italic;}
+table.spec{width:100%;border-collapse:collapse;font-size:7px;margin-bottom:6px;}
+table.spec td{padding:2.5px 4px;border-bottom:1px solid #eee;}
+table.spec td:first-child{color:#5F5E5A;width:35%;}
+.support{font-size:7px;color:#333;background:#F4F5F7;border-radius:4px;padding:5px 7px;margin-bottom:6px;}
+.foot2{margin-top:auto;border-top:1px solid #eee;padding:6px 16px 8px;font-size:6.8px;color:#5F5E5A;line-height:1.5;}
+.foot2 b{color:#333;font-size:7.8px;}
+.bar2{background:#026881;color:#fff;text-align:right;padding:5px 16px;font-size:10px;font-weight:700;letter-spacing:2px;}
 </style></head>
 <body>
 <div class="row">
 
-<div class="col"><p>1枚目（表面）</p>
-<div class="card">
-  <div class="hdr">
-    <div class="logo">RIGELロゴ</div>
-    <div class="rts"><b>RTS</b><span>「Robot training system」</span></div>
+<div class="col"><p>1枚目（表面）※カタログルール準拠：グラデ背景・単一訴求数値バナー・帯フッター</p>
+<div class="card p1">
+  <div class="band">
+    <div class="logo">RIGEL</div>
+    <div class="rts"><div class="cat">産業用ロボット教育システム</div><div class="name">RTS</div></div>
   </div>
-  <div class="catch">設備を買う前に、<br>人を育てる。</div>
-  <div class="sub">産業用ロボット教育レンタルシステム</div>
-  <div class="flow">はじめ方はシンプル：キットが届く → 組み立てる → 動かして学ぶ → 技術者に育つ</div>
-  <div class="body1">
-    <div class="feat">
-      <div><b>産業グレードの実機で学べる</b><span>習得スキルがそのまま実務に直結</span></div>
-      <div><b>月額制、買わずに始められる</b><span>最短3ヶ月から</span></div>
-      <div><b>JANOME製ロボットを採用</b><span>産業用ロボットのリーディングブランド</span></div>
-    </div>
-    <div class="photo">
-      <img src="../5.画像、イラスト/JR3203.png" alt="JANOME JR3203">
-      <p>JANOME製ロボット搭載</p>
-    </div>
+  <div class="catch">設備を買う前に、人を育てる。</div>
+  <div class="hero"><img src="../5.画像、イラスト/JR3203.png" alt="JANOME JR3203"></div>
+
+  <div class="why">
+    <div class="whybox q"><b>? なぜ教育ロボットが必要か</b>自動化したくても、扱える自社技術者がいない——そんな現場は多くあります。</div>
+    <div class="whybox a"><b>✓ RTSが解決します</b>生産設備とは別の教育専用設備で、現場を止めずに技術者を育てられます。</div>
   </div>
-  <div class="foot1"><span>STANDARDプラン　月額¥120,000〜（初期費用¥100,000）</span><span>株式会社RIGEL ©2026</span></div>
+
+  <div class="featgrid">
+    <div class="featcard"><div class="mono" style="background:#026881;">実</div><span>産業グレードの実機で学べる</span></div>
+    <div class="featcard"><div class="mono" style="background:#026881;">月</div><span>月額制、買わずに始められる</span></div>
+    <div class="featcard"><div class="mono" style="background:#0C447C;">機</div><span>JANOME製ロボットを採用</span></div>
+    <div class="featcard"><div class="mono" style="background:#0C447C;">統</div><span>複数メーカー機器を統合学習</span></div>
+    <div class="featcard"><div class="mono" style="background:#E8622C;">壊</div><span>故障を教材化して対応力を養う</span></div>
+    <div class="featcard"><div class="mono" style="background:#E8622C;">歴</div><span>20年のFA設備設計実務が土台</span></div>
+  </div>
+
+  <div class="price">STANDARDプラン　月額¥120,000〜（初期費用¥100,000）</div>
+  <div class="bar">RTS</div>
 </div>
 </div>
 
-<div class="col"><p>2枚目（裏面）</p>
-<div class="card">
-  <h2>学習の型</h2>
-  <div class="lead">全20ステップの体系カリキュラムで、基礎から段階的に習得できます。</div>
+<div class="col"><p>2枚目（裏面）※二段見出し・円形数値バッジ・帯フッター</p>
+<div class="card p2">
+  <div class="p2top"><div class="small">現場を止めずに、</div><div class="big">技術者を育てる。</div></div>
 
-  <h2>プラン比較</h2>
-  <table class="plans"><tr>
-    <td>STANDARD</td><td>ADVANCE</td><td>VISION</td><td>PROFESSIONAL</td>
-  </tr><tr style="background:none;font-weight:400;color:#333;">
-    <td>基礎20ステップ+センサー類</td><td>基礎20ステップ+通信関係</td><td>基礎20ステップ+画像処理</td><td>サーボ含む全範囲</td>
-  </tr></table>
-  <div class="pricenote">ADVANCE〜PROFESSIONAL：月額¥198,000〜¥498,000（グレードにより変動）。通信・画像処理・サーボ対応で設備原価が上がるため、月額もグレードに応じて上がります。※ADVANCE以上は受注後の製作となります。</div>
+  <div class="statrow">
+    <div class="stat"><div class="c"><b>20</b><i>STEP</i></div><p>体系カリキュラム</p></div>
+    <div class="stat"><div class="c"><b>3</b><i>ヶ月〜</i></div><p>最短契約期間</p></div>
+    <div class="stat"><div class="c"><b>3</b><i>営業日</i></div><p>メール返信目安</p></div>
+    <div class="stat"><div class="c"><b>20</b><i>年</i></div><p>FA設計実務</p></div>
+  </div>
 
-  <h2>共通仕様</h2>
-  <table>
-    <tr><td>納品形態</td><td style="text-align:right;">コンプリートキット（郵送・御社で組立）</td></tr>
-    <tr><td>契約期間</td><td style="text-align:right;">最短3ヶ月〜最長24ヶ月</td></tr>
-    <tr><td>契約終了後</td><td style="text-align:right;">梱包箱でご返送（送料お客様負担）</td></tr>
-    <tr><td>想定対象</td><td style="text-align:right;">中小の小型部品製造・組立業、専門学校</td></tr>
-  </table>
+  <div class="pad">
+    <h2>導入の流れ</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div>お問い合わせ・ヒアリング</div>
+      <div class="step"><div class="n">2</div>プラン選定・お見積り</div>
+      <div class="step"><div class="n">3</div>キットを郵送でお届け</div>
+      <div class="step"><div class="n">4</div>開梱・組立</div>
+      <div class="step"><div class="n">5</div>学習開始</div>
+    </div>
 
-  <div class="box"><b>初期費用について</b><br>センサーなど教育時に使用した部品代です。ケーブルの被覆を剥くなど加工を伴うため返品・再利用ができず、そのままお客様の資産としてお渡しします。</div>
+    <h2>学習カバレッジ（基礎編・全プラン共通）</h2>
+    <div class="currgrid">
+      <div class="currcard">
+        <div class="top"><div class="mono">電</div><b>電気配線の基礎</b></div>
+        <ul><li>安全・工具・電源</li><li>被覆剥きと圧着</li><li>配線の識別と整線</li><li>接点（A/B）の基礎</li><li>出力形式（PNP/NPN）</li></ul>
+      </div>
+      <div class="currcard">
+        <div class="top"><div class="mono">感</div><b>センサー・空圧の基礎</b></div>
+        <ul><li>光電・近接・レーザーセンサ</li><li>ポカよけの設計</li><li>空圧の基礎</li><li>電磁弁</li><li>シリンダー</li></ul>
+      </div>
+    </div>
 
-  <div class="pricenote" style="margin-bottom:0;">サポート体制：メールは3営業日以内に必ず返信いたします。オンライン対応・訪問サポートもご用意しており、初めての方も安心してご利用いただけます。</div>
+    <h2>プラン比較</h2>
+    <table class="plan">
+      <tr><th>プラン</th><th>内容</th><th>目安月額</th></tr>
+      <tr><td>STANDARD</td><td>基礎編＋センサー類</td><td>¥120,000〜</td></tr>
+      <tr><td>ADVANCE</td><td>基礎編＋通信関係</td><td rowspan="3">¥198,000〜¥498,000</td></tr>
+      <tr><td>VISION</td><td>基礎編＋画像処理</td></tr>
+      <tr><td>PROFESSIONAL</td><td>サーボ含む全範囲</td></tr>
+    </table>
+    <div class="smallnote">※初期費用（STANDARD時¥100,000）はセンサー等消耗部品代で返品不可。ADVANCE以上は設備原価上昇のため月額が上がり、受注後の製作となります。</div>
+
+    <h2>契約条件</h2>
+    <table class="spec">
+      <tr><td>契約期間</td><td style="text-align:right;">最短3ヶ月〜最長24ヶ月</td></tr>
+      <tr><td>契約終了後</td><td style="text-align:right;">梱包箱でご返送（送料お客様負担）</td></tr>
+    </table>
+
+    <h2>サポート体制</h2>
+    <div class="support">メール・オンライン対応・訪問サポートをご用意しています。</div>
+  </div>
 
   <div class="foot2">
-    <b>株式会社RIGEL</b><br>
-    千葉県柏市（法人住所確定後に正式表記）<br>
+    <b>株式会社RIGEL</b>　千葉県柏市（法人住所確定後に正式表記）<br>
     Web: rigel-works.jp　Mail: info@rigel-works.jp
   </div>
+  <div class="bar2">RTS</div>
 </div>
 </div>
 
