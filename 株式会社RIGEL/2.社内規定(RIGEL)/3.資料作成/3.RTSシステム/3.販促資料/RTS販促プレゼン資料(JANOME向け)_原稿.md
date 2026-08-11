@@ -83,7 +83,9 @@ related: [[RTS販促プレゼン資料(P5)_原稿]], [[基本概念]], [[RTS営�
 | 訪問対応 | **ご相談ください** |
 
 **会社概要（フッター）**
-株式会社RIGEL／千葉県柏市（番地以降は法人設立完了後に確定）／rigel-works.jp／info@rigel-works.jp
+株式会社RIGEL／千葉県柏市（KOIL柏の葉。号室等は登記時に確定）／https://rigel-works.jp／info@rigel-works.jp
+
+（2026-08-09更新：URLに`https://`を追加、住所を「KOIL柏の葉」に更新。顧客向け版と同時対応）
 
 ---
 

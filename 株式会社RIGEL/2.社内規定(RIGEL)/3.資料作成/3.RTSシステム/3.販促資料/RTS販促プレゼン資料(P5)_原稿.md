@@ -107,7 +107,9 @@ related: [[基本概念]], [[RTS営業戦略]], [[RTS_A4チラシ_案]], [[RTS�
 | 訪問対応 | ¥100,000 / 日 |
 
 **会社概要（フッター、白文字18pt＝スライド1と統一）**
-株式会社RIGEL／千葉県柏市（番地以降は法人設立完了後に確定）／rigel-works.jp／info@rigel-works.jp
+株式会社RIGEL／千葉県柏市（KOIL柏の葉。号室等は登記時に確定）／https://rigel-works.jp／info@rigel-works.jp
+
+（2026-08-09更新：URLに`https://`を追加、住所を「KOIL柏の葉」に更新）
 
 ---
 
