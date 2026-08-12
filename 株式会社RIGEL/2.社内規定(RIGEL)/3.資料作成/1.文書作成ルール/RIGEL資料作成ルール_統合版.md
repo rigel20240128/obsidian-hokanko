@@ -1,8 +1,8 @@
 ---
 name: RIGEL資料作成ルール_統合版
 type: format-master
-更新日時: 2026-08-02 10:09
-status: v1.3
+更新日時: 2026-08-12 17:15
+status: v1.4
 tags: [presentation, document, brand, format, prompt]
 supersedes: [[RIGEL資料作成_基本プロンプト]], [[プレゼンフォーマット]], [[営業提案プレゼン作成]], [[RIGEL Presentation Style Skill]], [[NotebookLM入力用_プレゼン基本情報]], [[プレゼン規定書_4案_NotebookLM生成]]
 ---
@@ -50,8 +50,14 @@ related: [[関連ファイル名]]
 - 新規にMarkdownを作成するときも、本文より先にこのプロパティを書く。
 - `name` はファイル名と一致させる（リネーム時は両方を直す）。
 - `related` は `[[ ]]` のリンク形式で書き、関連ファイルへ相互に張る。
-- - **表紙 ＆ 最後のページ**（しっかりと明示） `Copyright © 2026 RIGEL Inc. All Rights Reserved.`    
-- **間のすべてのページ**（フッターに短くシンプルに） `© 2026 RIGEL Inc.`
+- **表紙 ＆ 最後のページ**（しっかりと明示） `Copyright © 2026 株式会社RIGEL All Rights Reserved.`
+- **間のすべてのページ**（フッターに短くシンプルに） `© 2026 株式会社RIGEL`
+
+> **【2026-08-12 改訂・陛下ご裁可】著作権表示を「RIGEL Inc.」から「株式会社RIGEL」へ変更した。**
+> 旧記述は `Copyright © 2026 RIGEL Inc. All Rights Reserved.` ／ `© 2026 RIGEL Inc.` であった。
+> 変更の理由：[[Claude Code運用ルール]] 基本方針⑳（2026-08-04 追加）により **「RIGEL Inc.」は使用不可**と定められたため。日本の会社法上、法人の登記名称には会社種類を日本語で含む必要があり、「Inc.」は米国等の法人格表記にあたる。
+> 英語表記が必要な海外向け資料に限り `RIGEL Co., Ltd.` を用いる。**国内向け資料は常に「株式会社RIGEL」とする。**
+> 適用第一号：`5.契約書類\業務委託基本契約書(タイショー).pdf`（2026-08-12）
 
 
 ### 本文冒頭扱い
