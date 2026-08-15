@@ -96,7 +96,7 @@ JANOME製ロボットのカタログ写真を右下に掲載。**使用許諾取
 - 株式会社RIGEL
 - 千葉県柏市（番地以降は法人設立完了後に確定。現時点は仮表記）
 - Web: rigel-works.jp（仮）
-- Mail: info@rigel-works.jp（仮。正式アドレス未定のためプレースホルダー）
+- Mail: info@rigel-works.jp
 
 ---
 
