@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アルミフレーム ソルバー（出題に答える）</title>
+<style>
+  :root{--bg:#eef2f7;--card:#fff;--ink:#1f2933;--sub:#52606d;--line:#d3dce6;
+        --accent:#1769aa;--accent2:#0f4c75;--hi:#eaf3fb;--ok:#2e7d32;--ansbg:#f2fbf4;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+       background:var(--bg);color:var(--ink);}
+  header{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;padding:16px 20px;}
+  header h1{margin:0;font-size:18px;}
+  header p{margin:4px 0 0;font-size:12.5px;opacity:.9;}
+  .wrap{max-width:860px;margin:0 auto;padding:18px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+        padding:18px 20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+  h2{font-size:15px;color:var(--accent2);margin:0 0 6px;}
+  .tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+  .tab{padding:9px 16px;border:1px solid var(--line);border-radius:20px;cursor:pointer;
+       background:#fff;font-size:13.5px;font-weight:600;color:var(--sub);}
+  .tab.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .pane{display:none;}.pane.on{display:block;}
+  .row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;}
+  .fld{flex:1;min-width:120px;}
+  .fld label{display:block;font-size:12.5px;color:var(--sub);font-weight:600;margin-bottom:4px;}
+  .fld input,.fld select{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;
+        font-size:18px;text-align:center;background:#fff;}
+  .fld input:focus,.fld select:focus{outline:2px solid var(--hi);border-color:var(--accent);}
+  .q{font-size:12.5px;color:var(--sub);margin:2px 0 10px;}
+  .q b{color:var(--accent2);}
+  .ans{background:var(--ansbg);border:1px solid #bfe6c8;border-radius:10px;padding:14px 16px;margin-top:14px;}
+  .ans h3{margin:0 0 8px;font-size:13px;color:var(--ok);}
+  table{width:100%;border-collapse:collapse;font-size:15px;}
+  th,td{border:1px solid var(--line);padding:9px 10px;text-align:center;}
+  th{background:var(--hi);color:var(--accent2);font-size:12.5px;}
+  td.name{text-align:left;font-weight:600;}
+  td.big{font-size:19px;font-weight:700;color:var(--accent2);}
+  td.part{font-family:monospace;font-size:12.5px;color:var(--sub);}
+  tfoot td{background:#f3f8fd;font-weight:700;}
+  .cap{margin-top:8px;font-size:14px;color:var(--sub);}
+  .cap b{color:var(--ink);font-family:monospace;}
+  .err{color:#c0392b;font-weight:600;font-size:13px;min-height:18px;margin-top:8px;}
+  .adv{margin-top:12px;font-size:12.5px;color:var(--sub);}
+  .adv summary{cursor:pointer;font-weight:600;color:var(--accent2);}
+  .adv .r{display:flex;gap:16px;align-items:center;margin-top:8px;flex-wrap:wrap;}
+  .adv input{width:80px;padding:6px;font-size:14px;text-align:center;border:1px solid var(--line);border-radius:6px;}
+  .adv select{width:110px;padding:6px;font-size:14px;border:1px solid var(--line);border-radius:6px;}
+  .btns{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;}
+  button{cursor:pointer;border:none;border-radius:8px;font-size:14px;font-weight:600;padding:10px 16px;}
+  .csv{background:var(--ok);color:#fff;}.csv:hover{filter:brightness(.93);}
+  code{background:#eef2f6;padding:1px 5px;border-radius:4px;}
+  .hint{font-size:12px;color:var(--sub);margin-top:8px;}
+  .formula{font-size:12.5px;color:var(--sub);background:#fbfbfa;border:1px dashed var(--line);
+           border-radius:8px;padding:8px 12px;margin-top:10px;}
+</style>
+</head>
+<body>
+<header>
+  <h1>アルミフレーム ソルバー</h1>
+  <p>12本サイコロ形（直方体）／ 出題に答える計算GUI ・ 株式会社RIGEL</p>
+</header>
+
+<div class="wrap">
+
+  <!-- 共通：太さ・キャップ設定 -->
+  <div class="card">
+    <div class="row">
+      <div class="fld" style="max-width:130px">
+        <label>太さ □</label>
+        <select id="t"><option>30</option><option>40</option><option>60</option><option>80</option></select>
+      </div>
+      <details class="adv" style="flex:1">
+        <summary>キャップ設定（柱長に影響）</summary>
+        <div class="r">
+          <span>キャップ高さ <input type="number" id="capH" value="3" min="0" step="0.5"> mm/個</span>
+          <span>柱1本あたり
+            <select id="capN"><option value="1" selected>1個(上端)</option><option value="2">2個(上下)</option><option value="0">0個</option></select>
+          </span>
+        </div>
+        <div class="formula">柱長 Z ＝ 高さ H − キャップ高さ × 個数</div>
+      </details>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tabs">
+      <div class="tab on" data-pane="fwd">① 順算：外形 → 長さ・本数</div>
+      <div class="tab" data-pane="rev">② 逆算：長さ → 外形寸法</div>
+    </div>
+
+    <!-- 順算 -->
+    <div class="pane on" id="fwd">
+      <div class="q">出題例：<b>「□30・高さ1000・幅600・奥行800 のときの部材は？」</b></div>
+      <div class="row">
+        <div class="fld"><label>高さ H (mm)</label><input type="number" id="fH" value="1000" min="1"></div>
+        <div class="fld"><label>幅 W (mm)</label><input type="number" id="fW" value="600" min="1"></div>
+        <div class="fld"><label>奥行 D (mm)</label><input type="number" id="fD" value="800" min="1"></div>
+      </div>
+      <div class="err" id="fErr"></div>
+      <div class="ans">
+        <h3>答え</h3>
+        <table id="fOut"></table>
+        <div class="cap" id="fCap"></div>
+      </div>
+      <div class="btns"><button class="csv" onclick="csvFwd()">⬇ CSV出力</button></div>
+    </div>
+
+    <!-- 逆算 -->
+    <div class="pane" id="rev">
+      <div class="q">出題例：<b>「柱を997mmにしたい。高さは？」「幅フレームを540mmにしたい。幅は？」</b></div>
+      <div class="row">
+        <div class="fld" style="max-width:180px">
+          <label>部材の種類</label>
+          <select id="rKind">
+            <option value="post">柱（縦）</option>
+            <option value="width">幅フレーム（横）</option>
+            <option value="depth">奥行フレーム（横）</option>
+          </select>
+        </div>
+        <div class="fld"><label>狙う長さ (mm)</label><input type="number" id="rLen" value="997" min="1"></div>
+      </div>
+      <div class="err" id="rErr"></div>
+      <div class="ans">
+        <h3>答え</h3>
+        <div id="rOut" style="font-size:16px;line-height:1.8"></div>
+      </div>
+      <div class="formula" id="rFormula"></div>
+    </div>
+  </div>
+
+  <div class="hint">
+    品番 <code>NFSL6-太さ太さ-長さ</code>（切断長0.5mm単位）／ キャップ <code>HFCB6-太さ太さ-B</code> ・
+    <a href="アルミフレーム自動設計.html">補強・パネル込みの詳細ツール →</a>
+  </div>
+</div>
+
+<script>
+const CAP={30:"HFCB6-3030-B",40:"（□40用は未指定）",60:"HFCB6-6060-B",80:"（□80用は未指定）"};
+const round05=v=>Math.round(v*2)/2;
+const fmtLen=v=>{const r=round05(v);return Number.isInteger(r)?String(r):r.toFixed(1);};
+const g=id=>document.getElementById(id);
+const num=id=>parseFloat(g(id).value);
+const partNo=(t,len)=>`NFSL6-${t}${t}-${fmtLen(len)}`;
+let fCache=null;
+
+// ---- タブ切替 ----
+document.querySelectorAll('.tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+    tab.classList.add('on'); g(tab.dataset.pane).classList.add('on');
+  });
+});
+
+function capVals(){ return {capH:num('capH'), capN:parseInt(g('capN').value), t:parseInt(g('t').value)}; }
+
+// ---- ① 順算 ----
+function calcFwd(){
+  const {capH,capN,t}=capVals();
+  const H=num('fH'), W=num('fW'), D=num('fD'), err=g('fErr');
+  if([H,W,D].some(v=>!(v>0))){ err.textContent="高さ・幅・奥行に正の数値を入力してください。"; g('fOut').innerHTML=""; g('fCap').textContent=""; return; }
+  if(t*2>=W||t*2>=D){ err.textContent=`幅・奥行は太さ×2（${t*2}mm）より大きくしてください。`; g('fOut').innerHTML=""; g('fCap').textContent=""; return; }
+  err.textContent="";
+  const Z=round05(H-capH*capN), Wl=round05(W-t*2), Dl=round05(D-t*2);
+  const rows=[["柱（縦）",Z,4],["幅フレーム（横）",Wl,4],["奥行フレーム（横）",Dl,4]];
+  let html=`<thead><tr><th>部材</th><th>長さ(mm)</th><th>本数</th><th>MISUMI品番</th></tr></thead><tbody>`;
+  rows.forEach(r=>{ r.push(partNo(t,r[1]));
+    html+=`<tr><td class="name">${r[0]}</td><td class="big">${fmtLen(r[1])}</td><td class="big">${r[2]}</td><td class="part">${r[3]}</td></tr>`;});
+  html+=`</tbody><tfoot><tr><td>合計</td><td>—</td><td>12 本</td><td></td></tr></tfoot>`;
+  g('fOut').innerHTML=html;
+  const capQty=capN>0?4*capN:0;
+  g('fCap').innerHTML=`キャップ：<b>${CAP[t]}</b> × ${capQty} 個`;
+  fCache={t,H,W,D,rows,cap:CAP[t],capQty};
+}
+
+function csvFwd(){
+  if(!fCache){ alert("先に寸法を入力してください。"); return; }
+  const c=fCache,L=[];
+  L.push(["アルミフレーム 順算結果 (12本サイコロ形)"]);
+  L.push(["太さ",`□${c.t}`,"外形(高さ×幅×奥行)",`${c.H}×${c.W}×${c.D}`]);
+  L.push([]); L.push(["部材","長さ(mm)","本数","MISUMI品番"]);
+  c.rows.forEach(r=>L.push([r[0],fmtLen(r[1]),r[2],r[3]]));
+  L.push(["キャップ","",c.capQty,c.cap]);
+  const s="﻿"+L.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(",")).join("\r\n");
+  const b=new Blob([s],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(b);
+  a.download="アルミフレーム順算.csv"; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(a.href);
+}
+
+// ---- ② 逆算 ----
+function calcRev(){
+  const {capH,capN,t}=capVals();
+  const kind=g('rKind').value, len=num('rLen'), err=g('rErr');
+  if(!(len>0)){ err.textContent="長さに正の数値を入力してください。"; g('rOut').innerHTML=""; g('rFormula').textContent=""; return; }
+  err.textContent="";
+  let dim, label, formula;
+  if(kind==='post'){
+    dim=len+capH*capN; label="高さ H";
+    formula=`高さ H ＝ 柱長 ${fmtLen(len)} ＋ キャップ高さ ${capH} × ${capN} ＝ ${fmtLen(dim)} mm`;
+  }else if(kind==='width'){
+    dim=len+t*2; label="幅 W";
+    formula=`幅 W ＝ 幅フレーム ${fmtLen(len)} ＋ 太さ ${t} × 2 ＝ ${fmtLen(dim)} mm`;
+  }else{
+    dim=len+t*2; label="奥行 D";
+    formula=`奥行 D ＝ 奥行フレーム ${fmtLen(len)} ＋ 太さ ${t} × 2 ＝ ${fmtLen(dim)} mm`;
+  }
+  g('rOut').innerHTML=`必要な<b>${label}</b> ＝ <span style="font-size:26px;font-weight:800;color:var(--accent2)">${fmtLen(dim)}</span> mm
+     <br><span style="font-size:13px;color:var(--sub)">（□${t}／品番 ${partNo(t,len)} × 4本）</span>`;
+  g('rFormula').textContent=formula;
+}
+
+// リアルタイム反映
+["t","capH","capN","fH","fW","fD"].forEach(id=>{ g(id).addEventListener('input',calcFwd); g(id).addEventListener('change',calcFwd); });
+["t","capH","capN","rKind","rLen"].forEach(id=>{ g(id).addEventListener('input',calcRev); g(id).addEventListener('change',calcRev); });
+calcFwd(); calcRev();
+</script>
+</body>
+</html>
