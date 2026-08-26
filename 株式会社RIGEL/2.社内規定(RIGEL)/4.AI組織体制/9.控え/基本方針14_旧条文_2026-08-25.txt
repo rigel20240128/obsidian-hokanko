@@ -1,0 +1,5 @@
+■ 基本方針⑭　PDCAにおけるモデルの使い分け
+**P（計画・提案）とC（検証・確認）は Fable 5**（Agent toolで `model: "fable"`）。
+**D（実行）とA（改善）は Sonnet 5**（自分自身）。目的は Fable 5 の使用量を抑えること。
+Claude Codeは自己判断でモデルを切り替えられぬため、**切替が要る場面で貂蝉が提案し、陛下が `/model` で切り替える。**
+[[feedback_pdca_model_usage]]
