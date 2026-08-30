@@ -4,6 +4,9 @@
 .obsidian/cache
 .trash/
 
+# Claude Code の端末ローカル設定（個人環境固有・共有しない）
+.claude/settings.local.json
+
 # Secrets
 .env
 *.env

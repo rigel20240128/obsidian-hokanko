@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:afrel-robotics.jp)",
+      "WebFetch(domain:afrel.co.jp)",
+      "WebFetch(domain:bynas.com)",
+      "WebFetch(domain:fabic.jp)",
+      "WebFetch(domain:factory-dx-center.com)",
+      "WebFetch(domain:learninglab.afrel.co.jp)",
+      "WebFetch(domain:robolease.disr-inc.com)",
+      "WebFetch(domain:robotcloud.jp)",
+      "WebFetch(domain:www.serendip-rxm.com)",
+      "WebFetch(domain:www.technoreach.co.jp)",
+      "WebFetch(domain:www.vstone.co.jp)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./**/.env)",
+      "Read(./**/*.env)",
+      "Read(./**/.env.*)"
+    ]
+  }
+}
