@@ -52,11 +52,14 @@ jobs:
         run: |
           git config user.name "rigel-lead-gen[bot]"
           git config user.email "info@rigel-works.jp"
-          if git diff --quiet -- lead_gen/memories; then
+          # memories だけでなく、ループ自身が更新した探索戦略（researcher.md）も拾う。
+          # ここを memories 限定にすると、学習が翌日以降に引き継がれない。
+          TARGETS="lead_gen/memories .claude/agents/researcher.md"
+          if git diff --quiet -- $TARGETS && [ -z "$(git status --porcelain -- $TARGETS)" ]; then
             echo "差分なし。コミットしない"
             exit 0
           fi
-          git add lead_gen/memories
+          git add $TARGETS
           git commit -m "リード発掘ループ 自動実行 $(TZ=Asia/Tokyo date +%F)"
           for i in 1 2 3 4; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
