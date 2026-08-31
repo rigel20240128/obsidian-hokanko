@@ -1,0 +1,74 @@
+name: RIGEL 新規顧客発掘ループ
+
+on:
+  schedule:
+    # 日〜木 23:00 UTC = 月〜金 08:00 JST（cronはUTC判定のため日を1つ前へずらす）
+    - cron: "0 23 * * 0-4"
+  workflow_dispatch:
+    inputs:
+      target_leads:
+        description: "1回の実行で獲得する新規リード目標件数"
+        required: false
+        default: "10"
+      max_attempts:
+        description: "検索試行回数の上限"
+        required: false
+        default: "20"
+
+concurrency:
+  group: lead-gen
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Claude Code をインストール
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: ループを実行
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TARGET_LEADS: ${{ inputs.target_leads || '10' }}
+          MAX_ATTEMPTS: ${{ inputs.max_attempts || '20' }}
+        run: bash lead_gen/scripts/run_lead_gen.sh
+
+      - name: 成果をコミット
+        if: always()
+        run: |
+          git config user.name "rigel-lead-gen[bot]"
+          git config user.email "info@rigel-works.jp"
+          if git diff --quiet -- lead_gen/memories; then
+            echo "差分なし。コミットしない"
+            exit 0
+          fi
+          git add lead_gen/memories
+          git commit -m "リード発掘ループ 自動実行 $(TZ=Asia/Tokyo date +%F)"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push失敗。${i}回目のリトライ"
+            sleep $((2 ** i))
+          done
+          exit 1
+
+      - name: 実行ログを成果物として保存
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lead-gen-memories-${{ github.run_number }}
+          path: lead_gen/memories/
+          retention-days: 30
