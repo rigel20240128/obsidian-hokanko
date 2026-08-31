@@ -52,9 +52,9 @@ jobs:
         run: |
           git config user.name "rigel-lead-gen[bot]"
           git config user.email "info@rigel-works.jp"
-          # memories だけでなく、ループ自身が更新した探索戦略（researcher.md）も拾う。
-          # ここを memories 限定にすると、学習が翌日以降に引き継がれない。
-          TARGETS="lead_gen/memories .claude/agents/researcher.md"
+          # 探索戦略（.claude/agents/researcher.md）は代表者が採否を判断するため、
+          # ループには書かせない。コミット対象は memories のみとする。
+          TARGETS="lead_gen/memories"
           if git diff --quiet -- $TARGETS && [ -z "$(git status --porcelain -- $TARGETS)" ]; then
             echo "差分なし。コミットしない"
             exit 0
