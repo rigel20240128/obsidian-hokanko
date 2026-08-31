@@ -174,6 +174,26 @@
 
 ---
 
+## 6.5 認証（どちらか一方を選ぶ）
+
+| 方式 | Secret 名 | 費用 | 向き・不向き |
+|---|---|---|---|
+| **サブスク認証** | `CLAUDE_CODE_OAUTH_TOKEN` | **API従量課金なし**（Claude Pro/Max の契約に含まれる） | 個人のサブスクに紐づき、**レート制限を対話利用と共有**する。有効期限1年 |
+| APIキー認証 | `ANTHROPIC_API_KEY` | 従量課金（トークン単位） | 個人に依存しない。チーム運用向き |
+
+両方が設定されている場合は `CLAUDE_CODE_OAUTH_TOKEN` を優先し、`run_lead_gen.sh` が
+`ANTHROPIC_API_KEY` を明示的に unset する（どちらで課金されたか分からなくなるのを防ぐため）。
+
+### サブスク認証の手順
+1. 手元のPCで `claude setup-token` を実行（Claude Code v2.0.10以降・要サブスク）
+2. ブラウザで承認すると**ターミナルにトークンが表示される。保存はされないのでその場でコピーする**
+3. GitHub の Settings → Secrets and variables → Actions に `CLAUDE_CODE_OAUTH_TOKEN` として登録
+
+> ⚠️ **有効期限は1年。自動更新されない。** 期限が切れるとループは静かに失敗する。
+> 発行日をカレンダーに控え、11ヶ月後に再発行すること。
+
+---
+
 ## 7. 既知の制約
 
 * **Claude Code on the web の既定環境ではネットワークegressが制限されており、`WebFetch` が `EGRESS_BLOCKED` で失敗する。** `WebSearch` は Anthropic 側で実行されるため利用可能。

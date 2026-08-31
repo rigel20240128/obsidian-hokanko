@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # RIGEL 新規顧客発掘ループ ヘッドレス実行スクリプト
 #
-# 使い方:
-#   ANTHROPIC_API_KEY=... bash lead_gen/scripts/run_lead_gen.sh
+# 使い方（認証はどちらか一方でよい）:
+#   CLAUDE_CODE_OAUTH_TOKEN=... bash lead_gen/scripts/run_lead_gen.sh   # サブスク認証（API課金なし）
+#   ANTHROPIC_API_KEY=...       bash lead_gen/scripts/run_lead_gen.sh   # API従量課金
+#   ローカルPCで `claude` に既にログイン済みなら、どちらも不要
 #
 # 環境変数:
 #   TARGET_LEADS   1日の新規リード目標件数（既定: 10）
@@ -16,6 +18,23 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT"
+
+# --- 認証の判定 ---------------------------------------------------------
+# CLAUDE_CODE_OAUTH_TOKEN が入っていれば、そちらを優先する。
+# 両方が環境に居ると claude CLI がどちらを使ったか分からなくなるため、明示的に片方を落とす。
+if [ -n "${CLAUDE_CODE_OAUTH_TOKEN:-}" ]; then
+  unset ANTHROPIC_API_KEY
+  AUTH_MODE="サブスク認証（CLAUDE_CODE_OAUTH_TOKEN／API従量課金なし）"
+elif [ -n "${ANTHROPIC_API_KEY:-}" ]; then
+  AUTH_MODE="APIキー認証（ANTHROPIC_API_KEY／従量課金）"
+elif [ -d "$HOME/.claude" ] || [ -f "$HOME/.claude.json" ]; then
+  AUTH_MODE="ローカルのログイン情報"
+else
+  echo "[ERROR] 認証情報が無い。次のいずれかを設定すること：" >&2
+  echo "  - CLAUDE_CODE_OAUTH_TOKEN（claude setup-token で発行。サブスクを使う。API課金なし）" >&2
+  echo "  - ANTHROPIC_API_KEY（console.anthropic.com で発行。従量課金）" >&2
+  exit 1
+fi
 
 TARGET_LEADS="${TARGET_LEADS:-10}"
 MAX_ATTEMPTS="${MAX_ATTEMPTS:-20}"
@@ -44,6 +63,7 @@ KEEP_ENTRIES="${KEEP_ENTRIES:-7}" python3 lead_gen/scripts/rotate_log.py
 
 BEFORE="$(python3 -c 'import json; print(len(json.load(open("lead_gen/memories/leads_database.json",encoding="utf-8"))))')"
 echo "[INFO] 開始 ${TODAY} / 既存リード ${BEFORE}件 / 目標 ${TARGET_LEADS}件 / 試行上限 ${MAX_ATTEMPTS}回"
+echo "[INFO] 認証: ${AUTH_MODE}"
 
 PROMPT=$(cat <<PROMPT_EOF
 本日（${TODAY}）の RIGEL 新規顧客発掘ループを1回実行せよ。
