@@ -1,34 +1,16 @@
 {
   "_note": "重複判定キー台帳。削除禁止・追記のみ。キーは原則『掲載ページURL(正規化)』、不明時は『型番|販売店名|価格』。",
   "_created": "2026-08-25",
-<<<<<<< HEAD
-=======
   "_merged_2026-09-15": "巡回ごとにGitブランチが分岐し、2026-08-25分・2026-09-06分の記録が別ブランチに孤立していたため、本日統合復元した。詳細は検索履歴.mdの上奏事項参照。",
->>>>>>> origin/master
   "keys": [
     "https://www.nextdayautomation.com/products/used-janome-jr3303n-aj-desktop-3-axis-dispensing-robot-x-y-300mmx320mm-z-100mm-120vac",
     "JR3403N-BC|Machinio(Plasmatreat XYZ400,Germany)|応談",
     "JSR4404N|Machinio(Maverick Industrial Sales,Baroda MI)|1720660",
-<<<<<<< HEAD
-=======
     "https://www.machinio.com/listings/102941931-janome-jsr4404n-4-axes-pulse-motor-robot-in-baroda-mi",
->>>>>>> origin/master
     "JR2300|Machinio(Plasmatreat cell,Suwanee GA)|3823692",
     "JR-V2303|Machinio(South Korea)|応談",
     "JR2304N|Machinio(Baroda MI)|358470",
     "JR2304N|eBay(US,12JRN34551)|応談",
-<<<<<<< HEAD
-    "JR2203N-2200Nmini|Machinio(Carpinteria CA)|557622",
-    "JR500|Machinio(Italy,Poggibonsi)|応談",
-    "JR2500|Machinio(Italy,Poggibonsi)|応談",
-    "JR2503NE|Machinio(FL,US)|応談",
-    "JPU3005|Machinio(Tatebayashi,Japan)|600000",
-    "JS-250|Machinio(Houston TX)|応談",
-    "https://jp.usedmachinery.bz/machines/general_view/405821",
-    "https://jp.usedmachinery.bz/machines/general_view/311476"
-  ],
-  "_policy_note_2026-08-25": "陛下ご下命により海外サイト（Machinio/eBay/Next Day Automation等）は以後の探索対象から除外。上記の海外系キーは参考記録として保持するのみで、今後この一覧に海外キーを追加しない。"
-=======
     "https://www.machinio.com/listings/93038576-janome-janome-jr-2304n-in-united-states",
     "JR2203N-2200Nmini|Machinio(Carpinteria CA)|557622",
     "https://www.machinio.com/listings/88152678-janome-jr-2203n-2200n-mini-epoxy-dispenser-with-controller-in-carpinteria-ca",
@@ -51,5 +33,4 @@
     "https://axel.as-1.co.jp/asone/d/44-1062-19"
   ],
   "_policy_note_2026-08-25": "陛下ご下命により海外サイト（Machinio/eBay/Next Day Automation等）は以後の探索対象から除外。上記の海外系キーは参考記録として保持するのみで、今後この一覧に海外キーを追加しない。2026-09-06分はブランチ分断によりこの方針を受信しないまま実行された誤りだが、発見物自体は削除せず統合した。"
->>>>>>> origin/master
 }
