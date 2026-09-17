@@ -364,8 +364,8 @@ JANOME 卓上ロボット・直交ロボット・SCARAロボット
 株式会社RIGEL
 
 所在地　千葉県柏市
-Web　　rigel-works.jp
-Mail　　info@rigel-works.jp
+Web　　rigel-works.com
+Mail　　info@rigel-works.com
 ```
 
 ### クロージングメッセージ

@@ -325,8 +325,8 @@ related: [[関連ファイル名]]
 | 項目 | 記載内容 |
 |---|---|
 | 会社名 | 株式会社RIGEL |
-| ホームページ | https://www.rigel-works.jp |
-| お問い合わせ | info@rigel-works.jp |
+| ホームページ | https://rigel-works.com/ |
+| お問い合わせ | info@rigel-works.com |
 
 - 代表者名・所在地・電話番号・担当者名などは**記載しない**。
 - **会社案内はこの限りではない**（会社概要として代表者・所在地等を記載してよい）。
