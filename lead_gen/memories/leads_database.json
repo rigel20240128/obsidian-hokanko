@@ -1,0 +1,1702 @@
+[
+  {
+    "name_key": "エアプロダクツ",
+    "company": "エアプロダクツ株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 23,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "大川製作所",
+    "company": "株式会社大川製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 45,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "カワタ",
+    "company": "株式会社カワタ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 1,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "光沢",
+    "company": "有限会社光沢",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 6,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "小江戸鏡山酒造",
+    "company": "小江戸鏡山酒造株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 9,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "櫻井印刷所",
+    "company": "株式会社櫻井印刷所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 18,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "サンエイオプチカル",
+    "company": "有限会社サンエイオプチカル",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 48,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "塩野",
+    "company": "株式会社塩野",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 36,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "神州加工所",
+    "company": "株式会社神州加工所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 18,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "高砂精密",
+    "company": "株式会社高砂精密",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 27,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "高美精機",
+    "company": "高美精機株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 27,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "トシコ",
+    "company": "株式会社トシコ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 29,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "巴商工",
+    "company": "有限会社巴商工",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 15,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "仲産業",
+    "company": "仲産業株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 44,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "長谷川製作所",
+    "company": "株式会社長谷川製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 40,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "パラジー",
+    "company": "パラジー株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 14,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "春田工業",
+    "company": "株式会社春田工業",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 25,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ミクロ電子",
+    "company": "ミクロ電子株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 36,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ミノワ工機",
+    "company": "ミノワ工機株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 27,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "メイリン",
+    "company": "株式会社メイリン",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 21,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "横山木工",
+    "company": "有限会社横山木工",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 8,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "双葉電機",
+    "company": "有限会社双葉電機",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 18,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "大和工業",
+    "company": "大和工業株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 20,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "筋野",
+    "company": "有限会社筋野",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 14,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "黒須製作所",
+    "company": "有限会社黒須製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 7,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ノアクラフト",
+    "company": "有限会社ノアクラフト",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 5,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "VISELINK",
+    "company": "株式会社ＶＩＳＥＬＩＮＫ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 22,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "エービーイーダイヤモンド",
+    "company": "エービーイーダイヤモンド株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 25,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "キューテック",
+    "company": "株式会社キューテック",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 31,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "甲信精密",
+    "company": "有限会社甲信精密",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 6,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "西武化学",
+    "company": "西武化学株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 17,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "TRINE",
+    "company": "株式会社ＴＲＩＮＥ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 3,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "中島精機",
+    "company": "中島精機株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 7,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "長沼商事",
+    "company": "長沼商事株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 36,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "MIKAMI",
+    "company": "株式会社ＭＩＫＡＭＩ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 39,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ユニバーサルプロジェクト",
+    "company": "株式会社ユニバーサルプロジェクト",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 4,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ヨコタエレクトロ",
+    "company": "株式会社ヨコタエレクトロ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 7,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "和興製作所",
+    "company": "株式会社和興製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 24,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "鈴忠製作所",
+    "company": "有限会社鈴忠製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 19,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "アクトメント",
+    "company": "株式会社アクトメント",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 40,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "須田医科器械製作所",
+    "company": "有限会社須田医科器械製作所",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 2,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "早川工業",
+    "company": "早川工業株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 22,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "マヒト",
+    "company": "株式会社マヒト",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 40,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "マルヤマ工業",
+    "company": "有限会社マルヤマ工業",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 4,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "アクスモールディング",
+    "company": "アクスモールディング株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 20,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "旭産業",
+    "company": "旭産業株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 19,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "荒井製作所",
+    "company": "有限会社荒井製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 6,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "アリスト",
+    "company": "アリスト株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 2,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "アロニクス",
+    "company": "アロニクス株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 8,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "イービーエム",
+    "company": "イービーエム株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 10,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "池田車框製作所",
+    "company": "株式会社池田車框製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 25,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "伊藤高圧瓦斯容器製造所",
+    "company": "株式会社伊藤高圧瓦斯容器製造所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 10,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "イワタ製作所",
+    "company": "有限会社イワタ製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 4,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ＩＮＰＲＯＧ",
+    "company": "株式会社ｉｎｐｒｏｇ",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 3,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "上田製作所",
+    "company": "株式会社上田製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 35,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "エイチエムテイシステムエンジニアリング",
+    "company": "エイチエムテイシステムエンジニアリング株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 49,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "栄和",
+    "company": "株式会社栄和",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 13,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "エコマックス",
+    "company": "株式会社エコマックス",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 14,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "エヌエスシー",
+    "company": "株式会社エヌエスシー",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 37,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "大岩商会",
+    "company": "株式会社大岩商会",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 33,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "大橋新藏商店",
+    "company": "有限会社大橋新藏商店",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 6,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "オービーエス",
+    "company": "株式会社オービーエス",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 5,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "大森精密工業",
+    "company": "大森精密工業株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 5,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "カイエイオフィックス",
+    "company": "株式会社カイエイオフィックス",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 23,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "開栄産業",
+    "company": "株式会社開栄産業",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 23,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "片岡製作所",
+    "company": "有限会社片岡製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 7,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "平成工業",
+    "company": "平成工業株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 15,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "東新製作所",
+    "company": "株式会社東新製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": 20,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "ワイピーシステム",
+    "company": "株式会社ワイピーシステム",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 28,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "川越精工",
+    "company": "有限会社川越精工",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 12,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "シンワ",
+    "company": "株式会社シンワ",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 30,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md（gBizINFO抽出分）からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "極東精機製作所",
+    "company": "極東精機製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md 第04章「裏取りが必要な候補」からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳（従業員数未確認）。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "Eメタル",
+    "company": "合同会社Eメタル",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md 第04章「裏取りが必要な候補」からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳（従業員数未確認）。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "相模工機所",
+    "company": "株式会社相模工機所",
+    "domain": "",
+    "pref": "神奈川県",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md 第04章「裏取りが必要な候補」からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳（従業員数未確認）。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "町田工業",
+    "company": "株式会社町田工業",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md 第04章「裏取りが必要な候補」からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳（従業員数未確認）。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "町田工機",
+    "company": "町田工機株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "RTS顧客リスト.md 第04章「裏取りが必要な候補」からの初期投入",
+    "found_at": "2026-08-31",
+    "status": "existing",
+    "note": "既存台帳（従業員数未確認）。ループの新規判定では重複としてスキップする"
+  },
+  {
+    "name_key": "相模樹脂工業",
+    "company": "株式会社相模樹脂工業",
+    "domain": "baseconnect.in掲載",
+    "pref": "神奈川県",
+    "address": "",
+    "url": "",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "神奈川県 相模原市 樹脂 ポッティング 接着剤 塗布 手作業 製造 中小企業",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 相模原市。プラスチック射出成形・二次加工（塗装・接着）。工程・規模・窓口はWebFetch遮断のため未確認"
+  },
+  {
+    "name_key": "群馬レジン",
+    "company": "群馬レジン株式会社",
+    "domain": "",
+    "pref": "群馬県",
+    "address": "",
+    "url": "https://ja.nc-net.or.jp/company/87180/",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "群馬県 太田市 自動車部品 ねじ締め 組立 少量多品種 工場 自動化推進",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 太田市。精密プラスチック成形。検索スニペットに「ロボット自動化によって製造」の記載あり、既に自動化着手済みの可能性。自社サイト未確認"
+  },
+  {
+    "name_key": "相模塗装",
+    "company": "相模塗装株式会社",
+    "domain": "sagamitosoh.co.jp",
+    "pref": "神奈川県",
+    "address": "",
+    "url": "https://www.sagamitosoh.co.jp/company/",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "神奈川県 相模原市 樹脂 ポッティング 接着剤 塗布 手作業 製造 中小企業",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 自動車部品・医療機器・プラスチック製品の特殊塗装。RIGELの対象工程は『塗布（ディスペンス）』であり『塗装（スプレー）』とは別工程。適合性は要判断"
+  },
+  {
+    "name_key": "日本ノッズル精機",
+    "company": "日本ノッズル精機株式会社",
+    "domain": "",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "",
+    "employees": 30,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "埼玉県 精密部品 組立 手作業 ハンダ付け 会社概要 従業員 工場",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] ディーゼル燃料噴射装置部品の精密部品仕上げ・組立。従業員30名（検索スニペット記載）。手作業の仕上げ・組立工程があり適合性は高いが、工程詳細と窓口は未確認"
+  },
+  {
+    "name_key": "中山製作所",
+    "company": "株式会社中山製作所",
+    "domain": "k-nakayama.com",
+    "pref": "埼玉県",
+    "address": "",
+    "url": "https://www.k-nakayama.com/",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "埼玉県 精密部品 組立 手作業 ハンダ付け 会社概要 従業員 工場",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 熊谷市。五軸加工・複合旋盤による精密部品加工、半導体関連・医療機器部品。加工主体のため卓上ロボットの適合工程があるかは要確認"
+  },
+  {
+    "name_key": "宮城精工",
+    "company": "宮城精工株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "https://www.pio-ota.jp/yukoujou/company/detail/63",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "大田区 優工場 精密機器 組立 検査 少量多品種 自社サイト 従業員20名",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 大田区「優工場」認定企業。工程・規模・窓口は未確認（認定企業一覧に掲載されている事実のみ）"
+  },
+  {
+    "name_key": "品川測器製作所",
+    "company": "株式会社品川測器製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "https://www.pio-ota.jp/yukoujou/company/detail/33",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "優工場 認定企業 組立 はんだ付け 電子機器 精密 少量多品種 従業員",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 大田区「優工場」認定企業。工程・規模・窓口は未確認"
+  },
+  {
+    "name_key": "小池製作所",
+    "company": "株式会社小池製作所",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "https://www.pio-ota.jp/yukoujou/company/detail/58",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "優工場 認定企業 組立 はんだ付け 電子機器 精密 少量多品種 従業員",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 大田区「優工場」認定企業。工程・規模・窓口は未確認"
+  },
+  {
+    "name_key": "アベテクノシステム",
+    "company": "アベテクノシステム株式会社",
+    "domain": "",
+    "pref": "東京都",
+    "address": "",
+    "url": "https://www.pio-ota.jp/yukoujou/company/detail/43",
+    "employees": null,
+    "score": "C",
+    "issue": "",
+    "contact": {
+      "type": "",
+      "value": ""
+    },
+    "email_draft": "",
+    "source_query": "優工場 認定企業 組立 はんだ付け 電子機器 精密 少量多品種 従業員",
+    "found_at": "2026-08-31",
+    "status": "pending",
+    "note": "[WebFetch遮断] 大田区「優工場」認定企業。工程・規模・窓口は未確認"
+  }
+]
