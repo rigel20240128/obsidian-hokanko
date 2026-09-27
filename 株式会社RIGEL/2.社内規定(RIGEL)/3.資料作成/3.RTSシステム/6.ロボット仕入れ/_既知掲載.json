@@ -30,7 +30,17 @@
     "https://axel.as-1.co.jp/asone/d/44-1062-24",
     "https://axel.as-1.co.jp/asone/d/44-1062-23",
     "https://axel.as-1.co.jp/asone/d/44-1062-22",
-    "https://axel.as-1.co.jp/asone/d/44-1062-19"
+    "https://axel.as-1.co.jp/asone/d/44-1062-19",
+    "https://auctions.yahoo.co.jp/jp/auction/b1243410619",
+    "https://auctions.yahoo.co.jp/jp/auction/r1243429166",
+    "https://auctions.yahoo.co.jp/jp/auction/w1203743593",
+    "https://auctions.yahoo.co.jp/jp/auction/t1203734835",
+    "https://auctions.yahoo.co.jp/jp/auction/h1115530646",
+    "https://auctions.yahoo.co.jp/jp/auction/v1115537462",
+    "https://auctions.yahoo.co.jp/jp/auction/e1128344519",
+    "https://auctions.yahoo.co.jp/jp/auction/j1238236055",
+    "JR2400N|アイアールシー(ircforall.net)過去取扱|在庫切れ"
   ],
-  "_policy_note_2026-08-25": "陛下ご下命により海外サイト（Machinio/eBay/Next Day Automation等）は以後の探索対象から除外。上記の海外系キーは参考記録として保持するのみで、今後この一覧に海外キーを追加しない。2026-09-06分はブランチ分断によりこの方針を受信しないまま実行された誤りだが、発見物自体は削除せず統合した。"
+  "_policy_note_2026-08-25": "陛下ご下命により海外サイト（Machinio/eBay/Next Day Automation等）は以後の探索対象から除外。上記の海外系キーは参考記録として保持するのみで、今後この一覧に海外キーを追加しない。2026-09-06分はブランチ分断によりこの方針を受信しないまま実行された誤りだが、発見物自体は削除せず統合した。",
+  "_updated_2026-09-27": "第7回巡回でヤフオク国内出品8件＋IRC過去実績1件を追記"
 }
